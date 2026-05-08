@@ -519,6 +519,10 @@ export default function App() {
             {PROJECTS.map((proj, i) => (
               <motion.div 
                 key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: i * 0.2 }}
                 className="group flex flex-col xl:flex-row gap-12 lg:gap-20 items-start"
               >
                 <div className="xl:w-[450px] flex-shrink-0">
