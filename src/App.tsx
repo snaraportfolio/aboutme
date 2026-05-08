@@ -61,8 +61,8 @@ const PROJECTS: Project[] = [
   {
     title: "Enterprise AI Integration",
     role: "Director of Tech Innovation",
-    impact: "Led the implementation of GenUI and LLM-powered internal tools, reducing customer support response times by 40%.",
-    tags: ["Gemini AI", "Node.js", "Python", "Vector DBs"],
+    impact: "Led the implementation of strategic internal tools, reducing customer support response times by 40%.",
+    tags: ["Product Innovation", "Node.js", "Python", "Vector DBs"],
   },
   {
     title: "DevSecOps Maturity Model",
