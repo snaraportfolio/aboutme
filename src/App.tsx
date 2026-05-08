@@ -36,6 +36,7 @@ interface Project {
   role: string;
   impact: string;
   tags: string[];
+  image: string;
 }
 
 // --- Data ---
@@ -53,28 +54,39 @@ const SKILLS: Skill[] = [
 
 const PROJECTS: Project[] = [
   {
-    title: "Agentic AI Governance",
+    title: "Current Era: Strategic AI & Agentic Orchestration",
     role: "Technical Research Lead",
-    impact: "Building scalable product patterns for enterprise workflow automation, focusing on the intersection of AI governance and high-compliance data security.",
-    tags: ["Agentic AI", "Data Security", "Automation", "2025+"],
+    impact: "I am currently executing research pilots for autonomous agents with a focus on data dependency and cost-to-value trade-offs. I developed the 'Strategy in Motion' blueprint to operationalize Agentic AI within high-compliance enterprise environments.",
+    tags: ["Agentic AI", "Governance", "Secure Automation", "2025 State"],
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
   },
   {
-    title: "Nike Digital Innovation",
+    title: "Innovation Era: Product Creation & Consumer Services",
     role: "Principal Product Manager",
-    impact: "Directed global scale-up of biomechanical platforms and predictive sizing engines. Reduced return rates by 20% and drove 180% engagement lift.",
-    tags: ["Product Innovation", "Machine Learning", "Computer Vision", "Growth"],
+    impact: "I directed the global scale-up of biomechanical running insights and predictive engines. I led the technical strategy for physiological body maps, driving innovation in product creation and design through specialized visualizations.",
+    tags: ["Product Innovation", "Biomechanical", "Design Engine", "Data Viz"],
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",
   },
   {
-    title: "Enterprise Product Creation",
+    title: "Scale Era: Enterprise Platforms & Digital Core",
     role: "Technical Product Leader",
-    impact: "Built a 'Single Source of Truth' digital core for 3,000+ users. Increased release frequency 12x while maintaining 99.9% availability.",
-    tags: ["Cloud Native", "Technical Debt", "Digital Thread", "SaaS"],
+    impact: "I orchestrated the 'Single Source of Truth' digital core for 3,000+ users. I replaced fragmented legacy systems with a unified cloud-native platform, streamlining manufacturing and product creation across the global digital thread.",
+    tags: ["Enterprise SaaS", "Digital Thread", "Modernization", "12x Velocity"],
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000",
   },
   {
-    title: "Nike.com Global Platform",
+    title: "Global Era: Multi-Region Ecommerce Orchestration",
     role: "Technical Product Leader",
-    impact: "Directed strategy for a multi-billion dollar platform, scaling architecture to support 500%+ traffic growth and 99.99% uptime globally.",
-    tags: ["E-commerce", "Personalization", "Scale", "Direct-to-Consumer"],
+    impact: "I engineered the technical roadmap for ecommerce expansion across China, Japan, and the EU. I scaled the architecture to support 500%+ traffic growth while maintaining 99.99% availability for a multi-billion dollar platform.",
+    tags: ["Global Scale", "Localization", "Multi-Billion ARR", "Uptime Excellence"],
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000",
+  },
+  {
+    title: "Foundational Era: SEO, Global B2B & Wholesale Digitization",
+    role: "Technical Leader & Engineer",
+    impact: "I digitized global wholesale partner operations via Nike's first internet-based B2B commerce platforms and built the foundational catalog data layers. I also led the transition to responsive design and spearheaded early SEO and mobile site/app foundations for multi-billion dollar traffic.",
+    tags: ["B2B & B2C", "Wholesale Digital", "SEO Strategy", "Responsive Design"],
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000",
   },
 ];
 
@@ -173,42 +185,65 @@ export default function App() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="md:max-w-4xl"
           >
-            <div id="about" className="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/5 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              Principal Technical Product Manager
-            </div>
-            
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-bold tracking-tighter leading-[0.9] mb-10">
-              Bridging <br />
-              <span className="text-slate-400">Strategy</span> with <br className="hidden sm:block" />
-              Execution.
-            </h1>
-            
-            <p className="text-lg md:text-2xl text-slate-500 leading-relaxed max-w-2xl mb-12 font-medium">
-              Sunitha Narayanan scales global enterprise platforms from concept to production. 
-              Bridging executive vision with senior engineering execution to drive measurable outcomes.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mb-16">
-              <a 
-                href="#impact"
-                className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-slate-900/20 hover:-translate-y-1 transition-all group"
-              >
-                Impact Gallery
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a 
-                href="#contact"
-                className="inline-flex items-center justify-center px-8 py-5 border-2 border-slate-200 text-slate-900 rounded-2xl font-bold text-lg hover:border-slate-900 hover:bg-slate-50 transition-all font-sans"
-              >
-                Start Conversation
-              </a>
-            </div>
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="flex-1">
+                <div id="about" className="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/5 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-8">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                  Principal Technical Product Manager
+                </div>
+                
+                <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-bold tracking-tighter leading-[0.9] mb-10">
+                  Orchestrating <br />
+                  <span className="text-slate-600">Strategy</span> with <br className="hidden sm:block" />
+                  Execution.
+                </h1>
+                
+                <p className="text-lg md:text-2xl text-slate-600 leading-relaxed max-w-2xl mb-12 font-medium">
+                  Scaling global enterprise platforms from concept to production through the precision orchestration of technical depth and product strategy. 
+                  Driving measurable architectural impact and operational excellence at $1B+ scale.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 mb-16">
+                  <a 
+                    href="#impact"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-slate-900/20 hover:-translate-y-1 transition-all group"
+                  >
+                    Impact Gallery
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                  <a 
+                    href="#contact"
+                    className="inline-flex items-center justify-center px-8 py-5 border-2 border-slate-200 text-slate-900 rounded-2xl font-bold text-lg hover:border-slate-900 hover:bg-slate-50 transition-all font-sans"
+                  >
+                    Start Conversation
+                  </a>
+                </div>
 
-            <div className="flex items-center gap-10 text-slate-300 font-mono text-[10px] uppercase tracking-[0.3em] font-bold">
-              <div className="flex gap-2 items-center"><span className="text-slate-900">01</span> PRODUCT</div>
-              <div className="flex gap-2 items-center"><span className="text-slate-900">02</span> LEADERSHIP</div>
-              <div className="flex gap-2 items-center"><span className="text-slate-900">03</span> SCALE</div>
+                <div className="flex items-center gap-10 text-slate-400 font-mono text-[10px] uppercase tracking-[0.3em] font-bold">
+                  <div className="flex gap-2 items-center"><span className="text-slate-900">01</span> PRODUCT</div>
+                  <div className="flex gap-2 items-center"><span className="text-slate-900">02</span> LEADERSHIP</div>
+                  <div className="flex gap-2 items-center"><span className="text-slate-900">03</span> SCALE</div>
+                </div>
+              </div>
+
+              <div className="flex-1 w-full relative">
+                <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-slate-100 relative group">
+                  <img 
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
+                    alt="Strategic Leadership Visual"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 hover:scale-105 transition-all duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+                  <div className="absolute bottom-10 left-10 text-white">
+                    <div className="text-[10px] font-bold uppercase tracking-[0.4em] mb-2">Technical Leadership</div>
+                    <div className="text-2xl font-bold tracking-tight">Orchestrating Complex Systems</div>
+                  </div>
+                </div>
+                {/* Decorative Elements */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-slate-900 rounded-3xl -z-10" />
+                <div className="absolute -top-6 -left-6 w-32 h-32 border-2 border-slate-200 rounded-3xl -z-10" />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -219,17 +254,20 @@ export default function App() {
       </section>
 
       {/* Stats/Value Prop Bar */}
-      <section className="bg-slate-900 text-white py-12 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-8">
+      <section className="bg-slate-900 text-white py-16 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
+        </div>
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-12 text-center md:text-left relative z-10">
           {[
-            { label: "Product Value", value: "$2M+ ARR" },
-            { label: "Traffic Growth", value: "500%+" },
-            { label: "Engagement Lift", value: "180%+" },
-            { label: "Uptime SLA", value: "99.99%" }
+            { label: "Global Platform Scale", value: "$1B+ ARR" },
+            { label: "Market Traffic Growth", value: "500%+" },
+            { label: "Global Localization", value: "15+ Lang" },
+            { label: "Operational Regions", value: "5 Zones" }
           ].map((stat, i) => (
-            <div key={i} className="flex flex-col">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">{stat.label}</span>
-              <span className="text-3xl font-bold tracking-tight">{stat.value}</span>
+            <div key={i} className="flex flex-col min-w-[200px]">
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 mb-2">{stat.label}</span>
+              <span className="text-4xl md:text-5xl font-bold tracking-tighter text-white">{stat.value}</span>
             </div>
           ))}
         </div>
@@ -244,7 +282,7 @@ export default function App() {
                 <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Core Value</h2>
               </div>
               <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Builder of Things <br/>That Matter.</h3>
-              <p className="text-lg text-slate-500 leading-relaxed mb-12">
+              <p className="text-lg text-slate-600 leading-relaxed mb-12">
                 I thrive where the problem space is ambiguous and the technical lift is steep. 
                 I don’t just build products; I build teams that care.
               </p>
@@ -261,7 +299,7 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-bold text-lg mb-1">{item.title}</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -283,14 +321,17 @@ export default function App() {
             </div>
             
             <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden">
+              <div className="absolute inset-0 z-0 opacity-10">
+                <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
+              </div>
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-[100px]" />
               <div className="relative z-10">
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-10">The Leadership Lens</div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-10">The Leadership Lens</div>
                 
                 <div className="grid gap-12">
                   {["Product Strategy", "Technology", "Leadership"].map((cat) => (
                     <div key={cat}>
-                      <h4 className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-4">
+                      <h4 className="text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-6 flex items-center gap-4">
                         {cat}
                         <div className="h-px flex-1 bg-white/10" />
                       </h4>
@@ -298,7 +339,7 @@ export default function App() {
                         {SKILLS.filter(s => s.category === cat).map((skill, i) => (
                           <div 
                             key={i} 
-                            className="px-4 py-2 border border-white/10 rounded-xl text-xs font-medium hover:bg-white/5 transition-colors"
+                            className="px-4 py-2 border border-white/20 rounded-xl text-xs font-medium hover:bg-white/10 transition-colors bg-white/5"
                           >
                             {skill.name}
                           </div>
@@ -316,44 +357,60 @@ export default function App() {
       {/* Impact Section */}
       <section id="impact" className="py-24 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 relative z-10">
             <div className="max-w-2xl">
-              <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-400 mb-4">Case Studies</h2>
+              <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-500 mb-4">Case Studies</h2>
               <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Systemic Impact Gallery.</h3>
             </div>
-            <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest bg-slate-100 px-4 py-2 rounded-full">
+            <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest bg-slate-200/50 px-4 py-2 rounded-full text-slate-600">
               Principal-level Portfolio <ArrowUpRight className="w-4 h-4" />
             </div>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-12">
             {PROJECTS.map((proj, i) => (
               <motion.div 
                 key={i}
-                whileHover={{ x: 10 }}
-                className="group relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-100 transition-all hover:bg-slate-900 hover:text-white shadow-sm"
+                whileHover={{ y: -5 }}
+                className="group relative bg-white rounded-[2.5rem] border border-slate-100 transition-all hover:border-slate-300 shadow-sm overflow-hidden"
               >
-                <div className="flex flex-col md:flex-row gap-10 justify-between">
-                  <div className="md:w-2/3">
-                    <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">{proj.role}</div>
-                    <h4 className="text-3xl font-bold mb-6">{proj.title}</h4>
-                    <p className="text-xl opacity-70 leading-relaxed mb-8">{proj.impact}</p>
-                    <div className="flex flex-wrap gap-2 text-white">
+                <div className="flex flex-col lg:flex-row min-h-[400px]">
+                  {/* Image Side */}
+                  <div className="lg:w-1/3 relative h-64 lg:h-auto overflow-hidden">
+                    <img 
+                      src={proj.image} 
+                      alt={proj.title}
+                      referrerPolicy="no-referrer"
+                      className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 blur-[2px] group-hover:blur-0 scale-105 group-hover:scale-100"
+                    />
+                    <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-colors duration-500" />
+                    <div className="absolute top-6 left-6 text-white text-xs font-bold uppercase tracking-[0.3em] bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
+                      Era {i + 1}
+                    </div>
+                  </div>
+
+                  {/* Content Side */}
+                  <div className="lg:w-2/3 p-8 md:p-12 border-l border-slate-50 flex flex-col justify-center">
+                    <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 mb-6 flex items-center gap-4">
+                      {proj.role}
+                      <div className="h-px w-8 bg-slate-200" />
+                    </div>
+                    <h4 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 leading-tight">{proj.title}</h4>
+                    <p className="text-xl text-slate-600 leading-relaxed mb-10">{proj.impact}</p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {proj.tags.map((tag, idx) => (
-                        <span key={idx} className="text-[9px] font-bold uppercase tracking-widest px-3 py-1.5 bg-slate-900/5 group-hover:bg-white/10 rounded-lg border border-slate-200 group-hover:border-white/10 transition-colors">
+                        <span key={idx} className="text-[9px] font-bold uppercase tracking-widest px-4 py-2 bg-slate-50 text-slate-500 rounded-lg border border-slate-100 group-hover:border-slate-200 transition-colors">
                           {tag}
                         </span>
                       ))}
                     </div>
                   </div>
-                  <div className="md:w-1/3 flex md:justify-end items-start pt-4">
-                    <div className="w-16 h-16 rounded-full border border-slate-200 group-hover:border-white/20 flex items-center justify-center transition-all group-hover:rotate-45">
+
+                  <div className="absolute bottom-12 right-12 hidden lg:flex">
+                    <div className="w-16 h-16 rounded-2xl bg-slate-50 text-slate-900 flex items-center justify-center transition-all group-hover:bg-slate-900 group-hover:text-white group-hover:-rotate-12 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 shadow-xl shadow-slate-900/10">
                       <ArrowUpRight className="w-6 h-6" />
                     </div>
                   </div>
-                </div>
-                <div className="absolute top-10 right-10 text-9xl font-black opacity-[0.02] group-hover:opacity-[0.05] transition-opacity pointer-events-none font-mono">
-                  Era {i + 1}
                 </div>
               </motion.div>
             ))}
@@ -369,8 +426,8 @@ export default function App() {
             
             <div className="relative z-10 max-w-3xl mx-auto">
               <Mail className="w-12 h-12 mx-auto mb-10 text-slate-400" />
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">Let's build something <br/>that lasts.</h2>
-              <p className="text-xl text-slate-400 mb-12 leading-relaxed">
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">Let's synthesize something <br/>that lasts.</h2>
+              <p className="text-xl text-slate-300 mb-12 leading-relaxed">
                 Seeking Principal-level opportunities where deep technical fluency meets AI strategy. 
                 I’m energized by high-stakes conversations around product innovation and engineering culture.
               </p>
