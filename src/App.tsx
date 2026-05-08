@@ -28,7 +28,7 @@ import { useState, useEffect } from "react";
 // --- Types ---
 interface Skill {
   name: string;
-  category: "Strategy" | "Technology" | "Leadership";
+  category: "Product Strategy" | "Technology" | "Leadership";
 }
 
 interface Project {
@@ -40,35 +40,35 @@ interface Project {
 
 // --- Data ---
 const SKILLS: Skill[] = [
-  { name: "Enterprise Architecture", category: "Strategy" },
-  { name: "Cloud Native (AWS/GCP)", category: "Technology" },
-  { name: "SDLC Optimization", category: "Strategy" },
-  { name: "Microservices", category: "Technology" },
-  { name: "Cross-functional Leadership", category: "Leadership" },
-  { name: "Digital Transformation", category: "Strategy" },
-  { name: "Full-Stack System Design", category: "Technology" },
-  { name: "Agile/Scrum Management", category: "Leadership" },
-  { name: "Team Mentorship", category: "Leadership" },
+  { name: "Product Vision & Strategy", category: "Product Strategy" },
+  { name: "Technical Roadmapping", category: "Technology" },
+  { name: "Market Analysis", category: "Product Strategy" },
+  { name: "Scalable Architecture", category: "Technology" },
+  { name: "GTM Coordination", category: "Leadership" },
+  { name: "Digital Transformation", category: "Product Strategy" },
+  { name: "Data-Driven Decisions", category: "Technology" },
+  { name: "Agile Product Management", category: "Leadership" },
+  { name: "Stakeholder Leadership", category: "Leadership" },
 ];
 
 const PROJECTS: Project[] = [
   {
-    title: "Global Scalability Overhaul",
-    role: "Lead Architect",
-    impact: "Redesigned legacy monolithic architecture into distributed microservices, improving system uptime from 98.5% to 99.99% for 5M+ users.",
-    tags: ["React", "Go", "Kubernetes", "AWS"],
+    title: "Eco-System Modernization",
+    role: "Senior Product Leader",
+    impact: "Orchestrated the transition from legacy systems to a cloud-native platform, resulting in a 30% increase in product delivery speed and 15% reduction in TCO.",
+    tags: ["Product Strategy", "Cloud Native", "SaaS", "Transformation"],
   },
   {
-    title: "Enterprise AI Integration",
-    role: "Director of Tech Innovation",
-    impact: "Led the implementation of strategic internal tools, reducing customer support response times by 40%.",
-    tags: ["Product Innovation", "Node.js", "Python", "Vector DBs"],
+    title: "Next-Gen Platform Launch",
+    role: "Technology Product Manager",
+    impact: "Defined the MVP for a suite of internal optimization tools, reducing operational overhead by $2M annually through automated workflows.",
+    tags: ["Product Growth", "Node.js", "AI/ML", "Workflow Automation"],
   },
   {
-    title: "DevSecOps Maturity Model",
-    role: "Strategic Tech Lead",
-    impact: "Standardized CI/CD pipelines across 12 product squads, decreasing deployment lead time by 65%.",
-    tags: ["GitHub Actions", "Terraform", "Docker", "Snyk"],
+    title: "Global Feature Expansion",
+    role: "Strategic Product Lead",
+    impact: "Led cross-functional teams to launch localized experiences in 14 new markets, driving a 25% uptick in global MAUs.",
+    tags: ["Global Expansion", "User Experience", "Market Strategy", "Data Analytics"],
   },
 ];
 
@@ -154,18 +154,18 @@ export default function App() {
           >
             <div id="about" className="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/5 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              Executive Tech Lead & Solutions Architect
+              Technology Product Manager & Leader
             </div>
             
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-bold tracking-tighter leading-[0.9] mb-10">
-              Solutions <br />
-              <span className="text-slate-400">Architecture</span> for <br className="hidden sm:block" />
-              Global Scale.
+              Product <br />
+              <span className="text-slate-400">Leadership</span> for <br className="hidden sm:block" />
+              Global Impact.
             </h1>
             
             <p className="text-lg md:text-2xl text-slate-500 leading-relaxed max-w-2xl mb-12 font-medium">
-              Sunitha Narayanan works as a Senior Technology Architect building high-performance systems. 
-              Bridging strategic business goals with elite-level architectural execution.
+              Sunitha Narayanan drives technical product strategy and cross-functional excellence. 
+              Bridging the gap between engineering depth and market-leading product outcomes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -173,20 +173,20 @@ export default function App() {
                 href="#impact"
                 className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-slate-900/20 hover:-translate-y-1 transition-all group"
               >
-                Selected Impact
+                Strategy & Impact
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
                 href="#contact"
                 className="inline-flex items-center justify-center px-8 py-5 border-2 border-slate-200 text-slate-900 rounded-2xl font-bold text-lg hover:border-slate-900 hover:bg-slate-50 transition-all font-sans"
               >
-                Let's Build Together
+                Work Together
               </a>
             </div>
 
             <div className="flex items-center gap-10 text-slate-300 font-mono text-[10px] uppercase tracking-[0.3em] font-bold">
-              <div className="flex gap-2 items-center"><span className="text-slate-900">01</span> ARCHITECTURE</div>
-              <div className="flex gap-2 items-center"><span className="text-slate-900">02</span> STRATEGY</div>
+              <div className="flex gap-2 items-center"><span className="text-slate-900">01</span> PRODUCT</div>
+              <div className="flex gap-2 items-center"><span className="text-slate-900">02</span> LEADERSHIP</div>
               <div className="flex gap-2 items-center"><span className="text-slate-900">03</span> GROWTH</div>
             </div>
           </motion.div>
@@ -201,10 +201,10 @@ export default function App() {
       <section className="bg-slate-900 text-white py-12 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-8">
           {[
-            { label: "Uptime Delivered", value: "99.99%" },
-            { label: "Systems Architecture", value: "10+ Years" },
-            { label: "Squads Led", value: "12+" },
-            { label: "Scale Handled", value: "5M+ Users" }
+            { label: "Product Value", value: "$2M+ ARR" },
+            { label: "Technology Leader", value: "10+ Years" },
+            { label: "Markets Scaled", value: "14+" },
+            { label: "Engineering Liaison", value: "Global Range" }
           ].map((stat, i) => (
             <div key={i} className="flex flex-col">
               <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">{stat.label}</span>
@@ -222,17 +222,17 @@ export default function App() {
               <div className="inline-block py-1 pr-6 border-r border-slate-900 mb-8">
                 <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Value Proposition</h2>
               </div>
-              <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Strategic Leadership. <br/>Architectural Excellence.</h3>
+              <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Strategic Vision. <br/>Operational Mastery.</h3>
               <p className="text-lg text-slate-500 leading-relaxed mb-12">
-                I specialize in transforming complex business requirements into scalable, secure, and maintainable technology ecosystems. 
-                My approach prioritizes **long-term ROI**, **organizational agility**, and **technical resilience**.
+                I navigate the intersection of product roadmap and technical constraint. 
+                Ensuring that development velocity translates directly into business growth and user satisfaction.
               </p>
               
               <div className="space-y-4">
                 {[
-                  { icon: Layout, title: "Systems Thinking", desc: "Designing end-to-end solutions that account for both current velocity and future scalability." },
-                  { icon: Users2, title: "Technical Mentorship", desc: "Building high-performance engineering cultures through code quality and strategic hiring." },
-                  { icon: Server, title: "Architecture Audits", desc: "Identifying bottlenecks in legacy systems and piloting zero-downtime migrations." }
+                  { icon: Layout, title: "Product Strategy", desc: "Defining clear North Star metrics and roadmaps that align stakeholders and engineering squads." },
+                  { icon: Users2, title: "Team Leadership", desc: "Building cross-functional cultures that prioritize user-centric design and technical resilience." },
+                  { icon: Zap, title: "Technical Liaison", desc: "Deep technical fluency that enables effective decision making across the entire SDLC." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6 p-6 rounded-2xl bg-[#FAFAFA] border border-slate-100 items-center">
                     <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900 flex-shrink-0">
@@ -250,16 +250,16 @@ export default function App() {
             <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-[100px]" />
               <div className="relative z-10">
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-10">The Tech Lens</div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mb-10">The Leadership Lens</div>
                 
                 <div className="grid gap-12">
-                  {["Strategy", "Technology", "Leadership"].map((cat) => (
+                  {["Product Strategy", "Technology", "Leadership"].map((cat) => (
                     <div key={cat}>
                       <h4 className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-4">
                         {cat}
                         <div className="h-px flex-1 bg-white/10" />
                       </h4>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 text-white">
                         {SKILLS.filter(s => s.category === cat).map((skill, i) => (
                           <div 
                             key={i} 
@@ -284,10 +284,10 @@ export default function App() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="max-w-2xl">
               <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-400 mb-4">Case Studies</h2>
-              <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Recent High-Value Projects.</h3>
+              <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Strategic Product Outcomes.</h3>
             </div>
             <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest bg-slate-100 px-4 py-2 rounded-full">
-              Full Portfolio upon Request <ArrowUpRight className="w-4 h-4" />
+              Detailed Case Studies upon Request <ArrowUpRight className="w-4 h-4" />
             </div>
           </div>
 
@@ -332,12 +332,12 @@ export default function App() {
           <div className="bg-slate-900 rounded-[3rem] p-10 md:p-24 text-white relative overflow-hidden text-center">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#334155_0%,transparent_70%)] opacity-30" />
             
-            <div className="relative z-10 max-w-2xl mx-auto">
-              <Mail className="w-12 h-12 mx-auto mb-10 text-slate-400" />
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">Ready to evolve your tech stack?</h2>
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <Zap className="w-12 h-12 mx-auto mb-10 text-slate-400" />
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">Driving Growth Through Product Innovation.</h2>
               <p className="text-xl text-slate-400 mb-12 leading-relaxed">
-                Currently taking on strategic advisory roles and architectural audits. 
-                Let's discuss how we can scale your digital ecosystem.
+                Currently exploring senior leadership roles and strategic product partnerships. 
+                Let's discuss how we can build high-performance products and organizations.
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -349,21 +349,23 @@ export default function App() {
                   <Mail className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://linkedin.com"
+                  href="http://linkedin.com/in/nsunitha"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-10 py-5 border-2 border-white/20 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-3"
                 >
                   <Linkedin className="w-5 h-5" />
-                  View Professional Profile
+                  Connect on LinkedIn
                 </a>
               </div>
             </div>
           </div>
           
           <div className="mt-24 pt-12 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-            <div className="font-mono">© 2024 Sunitha Narayanan // Architecture Portfolio</div>
+            <div className="font-mono">© 2024 Sunitha Narayanan // Technology Product Leader</div>
             <div className="flex gap-8">
+              <a href="http://linkedin.com/in/nsunitha" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">LinkedIn</a>
               <a href="#" className="hover:text-slate-900 transition-colors">Resume</a>
-              <a href="#" className="hover:text-slate-900 transition-colors">LinkedIn</a>
               <a href="#" className="hover:text-slate-900 transition-colors">GitHub</a>
             </div>
           </div>
