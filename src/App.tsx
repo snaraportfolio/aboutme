@@ -6,275 +6,27 @@
 import { motion } from "motion/react";
 import { 
   ArrowRight, 
-  ArrowUpRight,
-  Code2, 
-  Cloud, 
-  Users2, 
-  Zap, 
-  Github, 
-  Linkedin, 
   Mail, 
-  ExternalLink,
-  ChevronDown,
-  Monitor,
-  Layout,
-  Server,
-  ShieldCheck,
+  Linkedin, 
+  Github,
   Menu,
   X
 } from "lucide-react";
 import { useState, useEffect } from "react";
-
-// --- Types ---
-interface Skill {
-  name: string;
-  category: "Product Strategy" | "Technology" | "Leadership";
-}
-
-interface Project {
-  title: string;
-  years: string;
-  shortName: string;
-  oneSentenceImpact: string;
-  role: string;
-  context: string;
-  problem: string;
-  decision: string;
-  outcome: string;
-  impact: string;
-  tags: string[];
-  image: string;
-}
-
-interface Testimonial {
-  quote: string;
-  author: string;
-  role: string;
-}
-
-interface Essay {
-  title: string;
-  excerpt: string;
-  date: string;
-  content: string;
-}
-
-// --- Data ---
-const LOGOS = [
-  { name: "Nike", url: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" },
-  { name: "Global Enterprise", url: "" }, // Will use text for these if no logo
-];
-
-const TESTIMONIALS: Testimonial[] = [
-  {
-    quote: "Sunitha has a rare ability to bridge the gap between high-level executive vision and deep architectural constraints. She doesn't just manage products; she unblocks entire engineering organizations.",
-    author: "Engineering Director",
-    role: "Digital Platform Lead @ Nike"
-  },
-  {
-    quote: "Sunitha has a rare ability to blend her engineering pedigree to deliver great product experiences. She keeps the customer at the heart of everything she does, building lasting business partnerships while navigating real-world technical constraints without losing momentum. A product leader with a serious engineering background who stays curious—she has the unique vision required to lead radical transformations.",
-    author: "Engineering Director",
-    role: "Director Product Creation"
-  }
-];
-
-const ESSAYS: Essay[] = [
-  {
-    title: "The Agentic Adoption Blueprint",
-    excerpt: "Moving beyond LLM chat toward autonomous trust boundaries. How to architect for agents in high-compliance environments.",
-    date: "May 2026",
-    content: `
-# The Agentic Adoption Blueprint
-
-Moving beyond basic LLM interactions requires establishing robust trust and architectural boundaries. For high-compliance environments, an agentic strategy is not about replacing human decision-making; it's about augmenting human capacity through secure, repeatable autonomous patterns.
-
-## 1. Establishing Trust Boundaries
-The foundation of agentic adoption in enterprise is strict policy-based control. Before an agent can act, it must operate within a clearly defined scope (the "Trust Boundary"). This prevents unauthorized actions and ensures accountability in automated workflows.
-
-## 2. Infrastructure for Observability
-You cannot trust what you cannot measure. Deploying agents at scale requires sophisticated observability. This includes logging every decision step, monitoring for unexpected behavior, and implementing automated kill-switches for when an agent deviates from its defined parameters.
-
-## 3. Metrics for Capacity Creation
-Don't measure adoption; measure outcomes. The success of an enterprise agent is defined by the capacity it creates—the time it saves, the error rate it reduces, or the new business scenarios it enables. Map agentic capability directly to measurable business throughput to ensure sustained investment.
-    `
-  },
-  {
-    title: "Innovation to Pilot to Scale",
-    excerpt: "A tactical framework for bridging the gap between ambitious R&D concepts and stable, global enterprise deployments.",
-    date: "2025",
-    content: `
-# Innovation to Pilot to Scale
-
-Bridging the gap between ambitious R&D and global enterprise reality requires more than just technical prowess—it requires a tactical framework that separates discovery from deployment.
-
-## 1. Innovation: Leading with the Problem
-The biggest mistake in R&D is starting with a solution. True innovation begins by identifying where users are stuck. Use research—user interviews, diary studies, and usage analytics—to map the friction points. Don't build a roadmap; build an understanding.
-
-## 2. Pilot: The "Pilot-and-Learn" Model
-Once a high-potential use case is identified, move to a pilot. Keep the environment controlled. Define clear Success Metrics up front. Is it saving time? Increasing throughput? Improving user satisfaction? Ensure the pilot is built to learn, not just to show off. Crucially, involve legal, privacy, and data security teams from day one; experimentation must adhere to strict corporate standards to protect our brand and customer data throughout the journey.
-
-## 3. Scale: Enterprise Accountability
-Scale is where governance, security, and compliance meet technology. For a pilot to become a global deployment, it must fit within existing architectural boundaries. Focus on data dependency, cost-to-value trade-offs, and observability. Scaling is about creating sustainable capacity, not just deploying a feature.
-    `
-  }
-];
-
-const PROJECTS: Project[] = [
-  {
-    title: "Strategic AI & Agentic Core",
-    years: "2024 - Present",
-    shortName: "AGENTIC",
-    oneSentenceImpact: "Developing an enterprise-grade framework for business case selection and agentic capacity creation.",
-    role: "Principal PM, AI Strategy",
-    context: "Organizations struggle to move from LLM chat curiosity to measurable agentic workflows with ROI.",
-    problem: "Lack of a structured method for identifying high-margin agentic use cases and measuring the resulting capacity creation.",
-    decision: "Independently researching a 'Decision-to-Metric' framework that maps agent capability to organizational capacity.",
-    outcome: "Drafting the 'Strategy in Motion' blueprint to enable secure adoption and measurable business metrics for agentic pilots.",
-    impact: "Researching autonomous agent frameworks with a focus on data dependency and cost-to-value trade-offs. Mapping how agentic implementations create capacity for new organizational capabilities.",
-    tags: ["Agentic AI", "Business Metrics", "Strategic Framework", "Capacity Creation"],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
-  },
-  {
-    title: "Biomechanical Running Insights",
-    years: "2021 - 2023",
-    shortName: "INNOVATION",
-    oneSentenceImpact: "Scaled a biomechanical insight engine across 4 Geos, expanding localized features for global consumer relevance.",
-    role: "Principal Product Manager",
-    context: "Biomechanical insight engines were high-touch, personalized services for elite athletes, leaving everyday runners underserved.",
-    problem: "Expanding commitment to runners required democratizing elite-level insights for the everyday athlete within Nike's ecosystem.",
-    decision: "Pivoted from niche model to scale, leveraging a pilot-and-learn strategy across 4 Geos to deliver personalized, localized biomechanical insights.",
-    outcome: "Achieved a 180% engagement lift and deeper member activation by making elite-level insights accessible to the everyday runner.",
-    impact: "Scaling global biomechanical running insights and predictive engines, aligning specialized sports science with Nike's global commitment to runners.",
-    tags: ["Geo-Expansion", "Biomechanical", "Localization", "Feature Innovation"],
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",
-  },
-  {
-    title: "Enterprise Platforms & Digital Core",
-    years: "2018 - 2021",
-    shortName: "SCALE",
-    oneSentenceImpact: "Modernized legacy supply chains into a unified, cloud-native digital core with 12x faster release velocity.",
-    role: "Principal Product Manager",
-    context: "A multi-billion dollar supply chain was running on fragmented, 20-year-old legacy systems.",
-    problem: "Deployment cycles took months, and data silos were causing multi-million dollar inventory errors.",
-    decision: "Proposed and unblocked a wholesale migration to a cloud-native 'Single Source of Truth' digital core.",
-    outcome: "Increased release frequency 12x and maintained 99.9% uptime during peak holiday traffic.",
-    impact: "Modernizing fragmented legacy systems into a unified cloud-native platform, streamlining manufacturing and product creation across the global digital thread.",
-    tags: ["Enterprise SaaS", "Digital Thread", "Modernization", "Operational Excellence"],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000",
-  },
-  {
-    title: "Multi-Region Ecommerce Orchestration",
-    years: "2015 - 2018",
-    shortName: "GLOBAL",
-    oneSentenceImpact: "Shipped a multi-billion dollar D2C platform across 5 global regions with 99.99% availability.",
-    role: "Principal Product Manager",
-    context: "Global expansion was stalled by a monolithic architecture that couldn't handle localized regional requirements.",
-    problem: "Entry into China and Japan required a localized tech stack that the current monolith couldn't support.",
-    decision: "Decided to decouple the checkout and identity services to allow for regional-specific integrations.",
-    outcome: "Successfully scaled to 500%+ traffic growth and supported $1B+ in new regional ARR.",
-    impact: "Engineering the strategic roadmap for ecommerce expansion across China, Japan, and the EU. Scaling architecture to support 500%+ traffic growth while maintaining 99.99% availability for a multi-billion dollar platform.",
-    tags: ["Global Scale", "Localization", "Multi-Billion ARR", "Strategic Execution"],
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000",
-  },
-];
-
-// --- Components ---
-
-function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/80 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-6"}`}>
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-slate-900 font-sans">
-          <div className="font-mono font-bold text-lg tracking-tighter">
-            SUNITHA<span className="text-slate-400">.N</span>
-          </div>
-          
-          <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest items-center">
-            <a href="#about" className="hover:text-slate-500 transition-colors">About</a>
-            <a href="#expertise" className="hover:text-slate-500 transition-colors">Expertise</a>
-            <a href="#impact" className="hover:text-slate-500 transition-colors">Outcomes</a>
-            <a href="#thinking" className="hover:text-slate-500 transition-colors">Thinking</a>
-            <a 
-              href="https://drive.google.com/file/d/11jNyRSZGbXBeZiaUFqsn-r-gFhosTd7u/view?usp=sharing" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-slate-500 transition-colors"
-            >
-              Resume
-            </a>
-            <a href="#contact" className="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-slate-700 transition-all active:scale-95 shadow-lg shadow-slate-900/10 hover:shadow-slate-900/20">
-              Contact
-            </a>
-          </div>
-
-          <button className="md:hidden text-slate-900" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Menu Overlay */}
-      {mobileMenuOpen && (
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden"
-        >
-          <div className="flex flex-col gap-8 text-2xl font-bold tracking-tight">
-            <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#expertise" onClick={() => setMobileMenuOpen(false)}>Expertise</a>
-            <a href="#impact" onClick={() => setMobileMenuOpen(false)}>Impact</a>
-            <a 
-              href="https://drive.google.com/file/d/11jNyRSZGbXBeZiaUFqsn-r-gFhosTd7u/view?usp=sharing"
-              target="_blank"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Resume
-            </a>
-            <a href="#contact" className="text-slate-400" onClick={() => setMobileMenuOpen(false)}>Hire Me</a>
-            
-            <div className="pt-12 border-t border-slate-100 flex gap-6">
-              <a href="http://linkedin.com/in/nsunitha" target="_blank" rel="noopener noreferrer"><Linkedin className="w-6 h-6" /></a>
-              <a href="mailto:sunitha.n@gmail.com"><Mail className="w-6 h-6" /></a>
-              <Github className="w-6 h-6" />
-            </div>
-          </div>
-        </motion.div>
-      )}
-    </>
-  );
-}
+import { PROJECTS, ESSAYS, TESTIMONIALS, Essay } from "./data";
+import { Nav } from "./components/Nav";
+import { EssayPage } from "./components/EssayPage";
 
 export default function App() {
   const [selectedEssay, setSelectedEssay] = useState<Essay | null>(null);
 
+  if (selectedEssay) {
+    return <EssayPage essay={selectedEssay} onClose={() => setSelectedEssay(null)} />;
+  }
+
   return (
     <div className="min-h-screen bg-[#FAFAFA] font-sans selection:bg-slate-900 selection:text-white overflow-x-hidden text-slate-900">
       <Nav />
-      {selectedEssay && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-slate-900/50 backdrop-blur-sm">
-          <div className="bg-white p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] max-w-2xl w-full max-h-[80vh] overflow-y-auto">
-            <h2 className="text-3xl font-bold mb-4">{selectedEssay.title}</h2>
-            <div className="text-slate-700 leading-relaxed text-lg whitespace-pre-line">{selectedEssay.content}</div>
-            <button
-              onClick={() => setSelectedEssay(null)}
-              className="mt-8 px-6 py-3 bg-slate-900 text-white rounded-full font-bold uppercase text-xs tracking-widest hover:bg-slate-700 transition-all"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 px-6">
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
@@ -521,7 +273,7 @@ export default function App() {
                 key={i}
                 className="group flex flex-col xl:flex-row gap-12 lg:gap-20 items-start"
               >
-                <div className="xl:w-[450px] flex-shrink-0">
+                <div className="xl:w-[350px] flex-shrink-0">
                   <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-slate-100 relative shadow-sm border border-slate-100">
                     <img 
                       src={proj.image} 
