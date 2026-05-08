@@ -40,41 +40,41 @@ interface Project {
 
 // --- Data ---
 const SKILLS: Skill[] = [
-  { name: "Product Vision & Strategy", category: "Product Strategy" },
-  { name: "Technical Roadmapping", category: "Technology" },
-  { name: "AI Strategy & Ethics", category: "Product Strategy" },
-  { name: "Scalable Platform Architecture", category: "Technology" },
-  { name: "Mentorship at Scale", category: "Leadership" },
-  { name: "Digital Transformation", category: "Product Strategy" },
-  { name: "Distributed Systems", category: "Technology" },
-  { name: "Agile Leadership", category: "Leadership" },
-  { name: "Stakeholder Management", category: "Leadership" },
+  { name: "Product Roadmapping (PLG)", category: "Product Strategy" },
+  { name: "API-First & Microservices", category: "Technology" },
+  { name: "Agentic AI Governance", category: "Product Strategy" },
+  { name: "AWS & Cloud Migration", category: "Technology" },
+  { name: "Cross-functional Mentorship", category: "Leadership" },
+  { name: "Enterprise Workflow Automation", category: "Product Strategy" },
+  { name: "Data Driven Decision Making", category: "Technology" },
+  { name: "Outcome Based OKRs", category: "Leadership" },
+  { name: "Strategic Planning", category: "Leadership" },
 ];
 
 const PROJECTS: Project[] = [
   {
-    title: "Era: Strategic AI Orchestration",
-    role: "Principal Technical Product Leader",
-    impact: "Executing research pilots for autonomous agents, focusing on data dependencies and cost-to-value trade-offs. Developed blueprints for scalable AI production.",
-    tags: ["Agentic AI", "Strategy", "Orchestration", "Future Tech"],
+    title: "Agentic AI Governance",
+    role: "Technical Research Lead",
+    impact: "Building scalable product patterns for enterprise workflow automation, focusing on the intersection of AI governance and high-compliance data security.",
+    tags: ["Agentic AI", "Data Security", "Automation", "2025+"],
   },
   {
-    title: "Era: Innovation & CX (Nike NSRL)",
-    role: "Senior Product Leader",
-    impact: "Scaled a biomechanical platform driving 30% increase in member activation. Led tech strategy for physiological data viz, increasing engagement by 180%.",
-    tags: ["Biometrics", "Motion Capture", "Data Visualization", "Growth"],
+    title: "Nike Digital Innovation",
+    role: "Principal Product Manager",
+    impact: "Directed global scale-up of biomechanical platforms and predictive sizing engines. Reduced return rates by 20% and drove 180% engagement lift.",
+    tags: ["Product Innovation", "Machine Learning", "Computer Vision", "Growth"],
   },
   {
-    title: "Era: Scale & Platform Modernization",
-    role: "Strategic Tech Lead",
-    impact: "Built a 'Single Source of Truth' digital core for 3,000+ users, replacing legacy systems and increasing release frequency 12x with 99.9% uptime.",
-    tags: ["Platform", "Migration", "Scale", "Modernization"],
+    title: "Enterprise Product Creation",
+    role: "Technical Product Leader",
+    impact: "Built a 'Single Source of Truth' digital core for 3,000+ users. Increased release frequency 12x while maintaining 99.9% availability.",
+    tags: ["Cloud Native", "Technical Debt", "Digital Thread", "SaaS"],
   },
   {
-    title: "Era: Global E-commerce Expansion",
-    role: "Technical Product Architect",
-    impact: "Built foundations for EU, Japan, and China market entries. Supported 500%+ traffic growth while maintaining 99.99% availability.",
-    tags: ["E-commerce", "Global Scale", "Localization", "Architecture"],
+    title: "Nike.com Global Platform",
+    role: "Technical Product Leader",
+    impact: "Directed strategy for a multi-billion dollar platform, scaling architecture to support 500%+ traffic growth and 99.99% uptime globally.",
+    tags: ["E-commerce", "Personalization", "Scale", "Direct-to-Consumer"],
   },
 ];
 
@@ -95,7 +95,7 @@ function Nav() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/80 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-6"}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-slate-900 font-sans">
           <div className="font-mono font-bold text-lg tracking-tighter">
-            SUNITHA<span className="text-slate-400">.NARAYANAN</span>
+            SUNITHA<span className="text-slate-400">.N</span>
           </div>
           
           <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest items-center">
@@ -175,18 +175,18 @@ export default function App() {
           >
             <div id="about" className="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/5 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              Principal Technical Product Leader
+              Principal Technical Product Manager
             </div>
             
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-bold tracking-tighter leading-[0.9] mb-10">
-              Architecting <br />
-              <span className="text-slate-400">Invisible</span> Systems <br className="hidden sm:block" />
-              of Innovation.
+              Bridging <br />
+              <span className="text-slate-400">Strategy</span> with <br className="hidden sm:block" />
+              Execution.
             </h1>
             
             <p className="text-lg md:text-2xl text-slate-500 leading-relaxed max-w-2xl mb-12 font-medium">
-              Engineer-turned-product leader bridging ambitious business vision with complex technical reality. 
-              Building the foundational platforms that allow users and teams to thrive.
+              Sunitha Narayanan scales global enterprise platforms from concept to production. 
+              Bridging executive vision with senior engineering execution to drive measurable outcomes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -249,7 +249,7 @@ export default function App() {
                 I don’t just build products; I build teams that care.
               </p>
               
-              <div className="space-y-4">
+              <div className="space-y-4 mb-12">
                 {[
                   { icon: Users2, title: "Relational Leadership", desc: "Mentored 30+ women in tech, viewing leadership as the orchestration of inclusive human systems." },
                   { icon: Zap, title: "The Synthesis Engine", desc: "Distilling complex technical systems into actionable strategic paths and roadmaps." },
@@ -265,6 +265,20 @@ export default function App() {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              <div className="pt-8 border-t border-slate-100">
+                <h4 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6">Education & Certification</h4>
+                <div className="grid sm:grid-cols-2 gap-8">
+                  <div>
+                    <div className="font-bold text-sm mb-1">M.S. Engineering & Tech</div>
+                    <div className="text-xs text-slate-500">Portland State University</div>
+                  </div>
+                  <div>
+                    <div className="font-bold text-sm mb-1">M.S. & B.S. Computer Science</div>
+                    <div className="text-xs text-slate-500">Academic Excellence</div>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -383,11 +397,11 @@ export default function App() {
           </div>
           
           <div className="mt-24 pt-12 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-            <div className="font-mono">© 2024 Sunitha Narayanan // Principal Technical Product Leader</div>
+            <div className="font-mono">© 2024 Sunitha Narayanan // Principal Technical Product Manager</div>
             <div className="flex gap-8">
               <a href="http://linkedin.com/in/nsunitha" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">LinkedIn</a>
               <a href="https://drive.google.com/file/d/11jNyRSZGbXBeZiaUFqsn-r-gFhosTd7u/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">Resume</a>
-              <a href="#" className="hover:text-slate-900 transition-colors">GitHub</a>
+              <a href="mailto:sunitha.n@gmail.com" className="hover:text-slate-900 transition-colors">Email</a>
             </div>
           </div>
         </div>
