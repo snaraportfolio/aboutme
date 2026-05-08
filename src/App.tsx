@@ -33,6 +33,8 @@ interface Skill {
 
 interface Project {
   title: string;
+  shortName: string;
+  oneSentenceImpact: string;
   role: string;
   impact: string;
   tags: string[];
@@ -55,37 +57,47 @@ const SKILLS: Skill[] = [
 const PROJECTS: Project[] = [
   {
     title: "Current Era: Strategic AI & Agentic Orchestration",
-    role: "Technical Research Lead",
-    impact: "I am currently executing research pilots for autonomous agents with a focus on data dependency and cost-to-value trade-offs. I developed the 'Strategy in Motion' blueprint to operationalize Agentic AI within high-compliance enterprise environments.",
-    tags: ["Agentic AI", "Governance", "Secure Automation", "2025 State"],
+    shortName: "AGENTIC",
+    oneSentenceImpact: "Strategizing the integration of autonomous agent pilots into secure, high-compliance enterprise blueprints.",
+    role: "Principal PM, AI Strategy",
+    impact: "Building agentic pilots for autonomous agents with a focus on data dependency and cost-to-value trade-offs. Drafting the 'Strategy in Motion' blueprint to operationalize Agentic AI within high-compliance enterprise environments.",
+    tags: ["Agentic AI", "AI Governance", "Secure Automation", "Strategic Roadmap"],
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
   },
   {
     title: "Innovation Era: Product Creation & Consumer Services",
+    shortName: "INNOVATION",
+    oneSentenceImpact: "Spearheading specialized physiological data visualizations to drive measurable innovation in biometric design.",
     role: "Principal Product Manager",
-    impact: "I directed the global scale-up of biomechanical running insights and predictive engines. I led the technical strategy for physiological body maps, driving innovation in product creation and design through specialized visualizations.",
+    impact: "Scaling global biomechanical running insights and predictive engines. Synthesizing the technical strategy for physiological body maps, driving innovation in product creation and design through specialized visualizations.",
     tags: ["Product Innovation", "Biomechanical", "Design Engine", "Data Viz"],
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",
   },
   {
     title: "Scale Era: Enterprise Platforms & Digital Core",
-    role: "Technical Product Leader",
-    impact: "I orchestrated the 'Single Source of Truth' digital core for 3,000+ users. I replaced fragmented legacy systems with a unified cloud-native platform, streamlining manufacturing and product creation across the global digital thread.",
-    tags: ["Enterprise SaaS", "Digital Thread", "Modernization", "12x Velocity"],
+    shortName: "SCALE",
+    oneSentenceImpact: "Orchestrating the evolution of legacy supply chains into a unified, cloud-native digital core with 12x faster release velocity.",
+    role: "Principal Product Manager",
+    impact: "Orchestrating the 'Single Source of Truth' digital core for 3,000+ users. Modernizing fragmented legacy systems into a unified cloud-native platform, streamlining manufacturing and product creation across the global digital thread.",
+    tags: ["Enterprise SaaS", "Digital Thread", "Modernization", "Operational Excellence"],
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000",
   },
   {
     title: "Global Era: Multi-Region Ecommerce Orchestration",
-    role: "Technical Product Leader",
-    impact: "I engineered the technical roadmap for ecommerce expansion across China, Japan, and the EU. I scaled the architecture to support 500%+ traffic growth while maintaining 99.99% availability for a multi-billion dollar platform.",
-    tags: ["Global Scale", "Localization", "Multi-Billion ARR", "Uptime Excellence"],
+    shortName: "GLOBAL",
+    oneSentenceImpact: "Scaling a multi-billion dollar D2C platform across 5 global regions with 99.99% availability.",
+    role: "Principal Product Manager",
+    impact: "Engineering the strategic roadmap for ecommerce expansion across China, Japan, and the EU. Scaling architecture to support 500%+ traffic growth while maintaining 99.99% availability for a multi-billion dollar platform.",
+    tags: ["Global Scale", "Localization", "Multi-Billion ARR", "Strategic Execution"],
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000",
   },
   {
     title: "Foundational Era: SEO, Global B2B & Wholesale Digitization",
-    role: "Technical Leader & Engineer",
-    impact: "I digitized global wholesale partner operations via Nike's first internet-based B2B commerce platforms and built the foundational catalog data layers. I also led the transition to responsive design and spearheaded early SEO and mobile site/app foundations for multi-billion dollar traffic.",
-    tags: ["B2B & B2C", "Wholesale Digital", "SEO Strategy", "Responsive Design"],
+    shortName: "FOUNDATIONS",
+    oneSentenceImpact: "Architecting the digital commerce infrastructure for global wholesale and multi-billion dollar B2C expansion.",
+    role: "Principal Product Manager",
+    impact: "Digitizing global wholesale partner operations via Nike's first internet-based B2B commerce platforms and building the foundational catalog data layers. Transitioning to responsive design and spearheading early SEO and mobile site/app foundations.",
+    tags: ["B2B & B2C", "Wholesale Digital", "SEO Strategy", "Product Foundations"],
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000",
   },
 ];
@@ -384,8 +396,8 @@ export default function App() {
                       className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 blur-[2px] group-hover:blur-0 scale-105 group-hover:scale-100"
                     />
                     <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-colors duration-500" />
-                    <div className="absolute top-6 left-6 text-white text-xs font-bold uppercase tracking-[0.3em] bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
-                      Era {i + 1}
+                    <div className="absolute top-6 left-6 text-white text-[9px] font-bold uppercase tracking-[0.4em] bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
+                      {proj.shortName}
                     </div>
                   </div>
 
@@ -395,7 +407,8 @@ export default function App() {
                       {proj.role}
                       <div className="h-px w-8 bg-slate-200" />
                     </div>
-                    <h4 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 leading-tight">{proj.title}</h4>
+                    <h4 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 leading-tight">{proj.title}</h4>
+                    <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">{proj.oneSentenceImpact}</p>
                     <p className="text-xl text-slate-600 leading-relaxed mb-10">{proj.impact}</p>
                     <div className="flex flex-wrap gap-2 mt-auto">
                       {proj.tags.map((tag, idx) => (
