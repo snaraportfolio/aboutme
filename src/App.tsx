@@ -154,18 +154,18 @@ export default function App() {
           >
             <div id="about" className="inline-flex items-center gap-2 px-3 py-1 bg-slate-900/5 rounded-full text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              Executive Tech Lead & Architect
+              Executive Tech Lead & Solutions Architect
             </div>
             
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-bold tracking-tighter leading-[0.9] mb-10">
-              Architecting <br />
-              <span className="text-slate-400">Scale</span> Through <br className="hidden sm:block" />
-              Impact.
+              Solutions <br />
+              <span className="text-slate-400">Architecture</span> for <br className="hidden sm:block" />
+              Global Scale.
             </h1>
             
             <p className="text-lg md:text-2xl text-slate-500 leading-relaxed max-w-2xl mb-12 font-medium">
-              Sunitha Narayanan builds technology that fuels business growth. 
-              Bridging strategic vision with senior-level architectural execution.
+              Sunitha Narayanan works as a Senior Technology Architect building high-performance systems. 
+              Bridging strategic business goals with elite-level architectural execution.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -220,19 +220,19 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
             <div>
               <div className="inline-block py-1 pr-6 border-r border-slate-900 mb-8">
-                <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Philosophy</h2>
+                <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Value Proposition</h2>
               </div>
-              <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Bridging Technical Depth with Business Outcomes.</h3>
+              <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Strategic Leadership. <br/>Architectural Excellence.</h3>
               <p className="text-lg text-slate-500 leading-relaxed mb-12">
-                As a Technology Architect, I don't just write code—I design the systems that enable teams to deliver value consistently. 
-                My focus is on modularity, security, and developer experience.
+                I specialize in transforming complex business requirements into scalable, secure, and maintainable technology ecosystems. 
+                My approach prioritizes **long-term ROI**, **organizational agility**, and **technical resilience**.
               </p>
               
               <div className="space-y-4">
                 {[
-                  { icon: Cloud, title: "Cloud Strategy", desc: "Expertise in multi-cloud deployments and optimization." },
-                  { icon: Zap, title: "Agile SDLC", desc: "Refining processes to increase delivery velocity without burnout." },
-                  { icon: ShieldCheck, title: "Security Governance", desc: "Implementing DevSecOps as a first-class citizen." }
+                  { icon: Layout, title: "Systems Thinking", desc: "Designing end-to-end solutions that account for both current velocity and future scalability." },
+                  { icon: Users2, title: "Technical Mentorship", desc: "Building high-performance engineering cultures through code quality and strategic hiring." },
+                  { icon: Server, title: "Architecture Audits", desc: "Identifying bottlenecks in legacy systems and piloting zero-downtime migrations." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6 p-6 rounded-2xl bg-[#FAFAFA] border border-slate-100 items-center">
                     <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900 flex-shrink-0">
