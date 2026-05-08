@@ -389,10 +389,14 @@ export default function App() {
                 <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Principal Scope</h2>
               </div>
               <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Unblocking Orgs <br/>Through Technical Strategy.</h3>
-              <p className="text-lg text-slate-600 leading-relaxed mb-12">
-                I thrive where the problem space is ambiguous and the architectural lift is steep. 
-                I don’t just manage products; I drive the technical decisions that enable global scale.
-              </p>
+              <div className="space-y-6 mb-12">
+                <p className="text-xl text-slate-900 font-bold leading-tight">
+                  "What separates good PMs from great ones isn't just technical depth—it's knowing which problem is actually worth solving."
+                </p>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  I've seen too many teams build the "right" solution to the wrong problem. That's why I lead with research: user interviews, diary studies, and usage analytics. I don't start with a roadmap; I start by understanding where people are stuck and exploring how new technology can enable new capabilities for the business and its customers.
+                </p>
+              </div>
               
               <div className="space-y-4 mb-12">
                 {[
