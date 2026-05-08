@@ -56,6 +56,7 @@ interface Essay {
   title: string;
   excerpt: string;
   date: string;
+  content: string;
 }
 
 // --- Data ---
@@ -71,9 +72,9 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Digital Platform Lead @ Nike"
   },
   {
-    quote: "A powerhouse in technical strategy. She built the foundation for our global D2C expansion that now supports billions in revenue.",
-    author: "VP of Product",
-    role: "Global Direct-to-Consumer"
+    quote: "Sunitha has a rare ability to blend her engineering pedigree to deliver great product experiences. She keeps the customer at the heart of everything she does, building lasting business partnerships while navigating real-world technical constraints without losing momentum. A product leader with a serious engineering background who stays curious—she has the unique vision required to lead radical transformations.",
+    author: "Engineering Director",
+    role: "Director Product Creation"
   }
 ];
 
@@ -81,12 +82,40 @@ const ESSAYS: Essay[] = [
   {
     title: "The Agentic Adoption Blueprint",
     excerpt: "Moving beyond LLM chat toward autonomous trust boundaries. How to architect for agents in high-compliance environments.",
-    date: "May 2026"
+    date: "May 2026",
+    content: `
+# The Agentic Adoption Blueprint
+
+Moving beyond basic LLM interactions requires establishing robust trust and architectural boundaries. For high-compliance environments, an agentic strategy is not about replacing human decision-making; it's about augmenting human capacity through secure, repeatable autonomous patterns.
+
+## 1. Establishing Trust Boundaries
+The foundation of agentic adoption in enterprise is strict policy-based control. Before an agent can act, it must operate within a clearly defined scope (the "Trust Boundary"). This prevents unauthorized actions and ensures accountability in automated workflows.
+
+## 2. Infrastructure for Observability
+You cannot trust what you cannot measure. Deploying agents at scale requires sophisticated observability. This includes logging every decision step, monitoring for unexpected behavior, and implementing automated kill-switches for when an agent deviates from its defined parameters.
+
+## 3. Metrics for Capacity Creation
+Don't measure adoption; measure outcomes. The success of an enterprise agent is defined by the capacity it creates—the time it saves, the error rate it reduces, or the new business scenarios it enables. Map agentic capability directly to measurable business throughput to ensure sustained investment.
+    `
   },
   {
     title: "Innovation to Pilot to Scale",
     excerpt: "A tactical framework for bridging the gap between ambitious R&D concepts and stable, global enterprise deployments.",
-    date: "2025"
+    date: "2025",
+    content: `
+# Innovation to Pilot to Scale
+
+Bridging the gap between ambitious R&D and global enterprise reality requires more than just technical prowess—it requires a tactical framework that separates discovery from deployment.
+
+## 1. Innovation: Leading with the Problem
+The biggest mistake in R&D is starting with a solution. True innovation begins by identifying where users are stuck. Use research—user interviews, diary studies, and usage analytics—to map the friction points. Don't build a roadmap; build an understanding.
+
+## 2. Pilot: The "Pilot-and-Learn" Model
+Once a high-potential use case is identified, move to a pilot. Keep the environment controlled. Define clear Success Metrics up front. Is it saving time? Increasing throughput? Improving user satisfaction? Ensure the pilot is built to learn, not just to show off. Crucially, involve legal, privacy, and data security teams from day one; experimentation must adhere to strict corporate standards to protect our brand and customer data throughout the journey.
+
+## 3. Scale: Enterprise Accountability
+Scale is where governance, security, and compliance meet technology. For a pilot to become a global deployment, it must fit within existing architectural boundaries. Focus on data dependency, cost-to-value trade-offs, and observability. Scaling is about creating sustainable capacity, not just deploying a feature.
+    `
   }
 ];
 
@@ -111,11 +140,11 @@ const PROJECTS: Project[] = [
     shortName: "INNOVATION",
     oneSentenceImpact: "Scaled a biomechanical insight engine across 4 Geos, expanding localized features for global consumer relevance.",
     role: "Principal Product Manager",
-    context: "Consumer biomechanical data lacked the regional relevance and feature depth needed for global product adoption.",
-    problem: "A one-size-fits-all digital engine failed to account for geo-specific running behaviors and linguistic nuances.",
-    decision: "Pivoted to a pilot-and-learn model in 4 major Geos, adding localized capabilities based on regional runner profiles.",
-    outcome: "Expanded feature sets across multiple languages, driving a 180% engagement lift and deeper member activation per region.",
-    impact: "Scaling global biomechanical running insights and predictive engines. Synthesizing the technical strategy for localized physiological body maps across China, Japan, EU, and NA.",
+    context: "Biomechanical insight engines were high-touch, personalized services for elite athletes, leaving everyday runners underserved.",
+    problem: "Expanding commitment to runners required democratizing elite-level insights for the everyday athlete within Nike's ecosystem.",
+    decision: "Pivoted from niche model to scale, leveraging a pilot-and-learn strategy across 4 Geos to deliver personalized, localized biomechanical insights.",
+    outcome: "Achieved a 180% engagement lift and deeper member activation by making elite-level insights accessible to the everyday runner.",
+    impact: "Scaling global biomechanical running insights and predictive engines, aligning specialized sports science with Nike's global commitment to runners.",
     tags: ["Geo-Expansion", "Biomechanical", "Localization", "Feature Innovation"],
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",
   },
@@ -226,9 +255,25 @@ function Nav() {
 }
 
 export default function App() {
+  const [selectedEssay, setSelectedEssay] = useState<Essay | null>(null);
+
   return (
     <div className="min-h-screen bg-[#FAFAFA] font-sans selection:bg-slate-900 selection:text-white overflow-x-hidden text-slate-900">
       <Nav />
+      {selectedEssay && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-slate-900/50 backdrop-blur-sm">
+          <div className="bg-white p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <h2 className="text-3xl font-bold mb-4">{selectedEssay.title}</h2>
+            <div className="text-slate-700 leading-relaxed text-lg whitespace-pre-line">{selectedEssay.content}</div>
+            <button
+              onClick={() => setSelectedEssay(null)}
+              className="mt-8 px-6 py-3 bg-slate-900 text-white rounded-full font-bold uppercase text-xs tracking-widest hover:bg-slate-700 transition-all"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 px-6">
@@ -246,12 +291,12 @@ export default function App() {
           >
             <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
               <div className="flex-1 order-2 lg:order-1">
-                <div id="about" className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-8 border border-slate-200/50">
+                <div id="about" className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-slate-700 mb-8 border border-slate-200/50">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
-                  Available May 2026 // Distributed
+                  Available · Principal IC & Director roles
                 </div>
                 
                 <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter leading-[0.85] mb-8">
@@ -259,14 +304,25 @@ export default function App() {
                   Narayanan<span className="text-slate-300">.</span>
                 </h1>
                 
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 tracking-tight">
-                  Principal Technical Product Manager
-                </h2>
+                <div className="mb-8">
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+                    Principal Technical Product Manager
+                  </h2>
+                  <p className="text-slate-700 font-medium text-sm mt-2">Available · Principal IC & Director roles Based in Portland, OR · Open to remote & hybrid (PST / EST)</p>
+                </div>
 
-                <p className="text-lg md:text-2xl text-slate-600 leading-tight max-w-2xl mb-12">
-                  <span className="text-slate-900 font-bold">I specialize in the journey from Innovation to Pilot to Scale.</span> 
-                  By bridging deep technical strategy with product execution, I unblock complex organizations and transform ambitious concepts into global enterprise reality.
-                </p>
+                <div className="space-y-6 mb-12">
+                  <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
+                    <span className="text-slate-900 font-bold">Authoring an enterprise blueprint for safely operationalizing autonomous agents</span> — data-dependency mapping, cost-to-value gates, and governance for high-compliance environments.
+                  </p>
+                  <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
+                    <span className="text-slate-900 font-bold">Consumer product creation & data viz:</span> Owned the technical strategy for physiological body-map visualizations for apparel design for performance products.
+                  </p>
+                  <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
+                    <span className="text-slate-900 font-bold">I specialize in the journey from Innovation to Pilot to Scale.</span> 
+                    By bridging deep technical strategy with product execution, I unblock complex organizations and transform ambitious concepts into global enterprise reality.
+                  </p>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-16">
                   <a 
@@ -284,17 +340,17 @@ export default function App() {
                   </a>
                 </div>
 
-                <p className="text-slate-400 font-medium italic text-sm mb-12">
+                <p className="text-slate-600 font-medium italic text-sm mb-12">
                   Currently exploring Principal/Director roles in AI platform strategy.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-x-12 gap-y-6 pt-12 border-t border-slate-200">
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Previous</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-1">Previous</span>
                     <span className="text-sm font-bold text-slate-800">Nike // Product Strategy</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Location</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-1">Location</span>
                     <span className="text-sm font-bold text-slate-800">Portland, OR // Remote</span>
                   </div>
                 </div>
@@ -371,7 +427,7 @@ export default function App() {
       {/* Logo Wall */}
       <section className="py-12 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale transition-all">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale transition-all">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" className="h-8" />
             <div className="text-xl font-black tracking-tighter">GLOBAL ENTERPRISE</div>
             <div className="text-xl font-bold font-mono tracking-tighter italic">D2C SCALE</div>
@@ -386,14 +442,14 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start mb-32">
             <div>
               <div className="inline-block py-1 pr-6 border-r border-slate-900 mb-8">
-                <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Principal Scope</h2>
+                <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-600">Principal Scope</h2>
               </div>
               <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Unblocking Orgs <br/>Through Technical Strategy.</h3>
               <div className="space-y-6 mb-12">
                 <p className="text-xl text-slate-900 font-bold leading-tight">
                   "What separates good PMs from great ones isn't just technical depth—it's knowing which problem is actually worth solving."
                 </p>
-                <p className="text-lg text-slate-600 leading-relaxed">
+                <p className="text-lg text-slate-800 leading-relaxed">
                   I've seen too many teams build the "right" solution to the wrong problem. That's why I lead with research: user interviews, diary studies, and usage analytics. I don't start with a roadmap; I start by understanding where people are stuck and exploring how new technology can enable new capabilities for the business and its customers.
                 </p>
               </div>
@@ -410,7 +466,7 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-bold text-lg mb-1">{item.title}</h4>
-                      <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-slate-800 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -419,7 +475,7 @@ export default function App() {
             
             <div className="space-y-8">
               <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden">
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-10">Decision-Making Framework</div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-10">Decision-Making Framework</div>
                 <div className="space-y-8">
                   {TESTIMONIALS.map((t, i) => (
                     <div key={i} className="relative">
@@ -428,7 +484,7 @@ export default function App() {
                         <div className="h-px w-8 bg-white/20" />
                         <div>
                           <div className="font-bold text-sm">{t.author}</div>
-                          <div className="text-[10px] uppercase tracking-widest text-slate-400">{t.role}</div>
+                          <div className="text-[10px] uppercase tracking-widest text-slate-600">{t.role}</div>
                         </div>
                       </div>
                     </div>
@@ -437,9 +493,9 @@ export default function App() {
               </div>
 
               <div className="p-8 md:p-12 border border-slate-100 rounded-[2.5rem] bg-[#FAFAFA]">
-                 <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-8">Mentorship Impact</div>
+                 <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-8">Mentorship Impact</div>
                  <h4 className="text-3xl font-bold mb-4">30+ Women Mentored</h4>
-                 <p className="text-slate-600 leading-relaxed">
+                 <p className="text-slate-800 leading-relaxed">
                    Founded a cross-functional mentorship circle to sponsor emerging talent. 
                    Focused on navigating technical seniority and building influence in architectural reviews.
                  </p>
@@ -454,7 +510,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 relative z-10">
             <div className="max-w-2xl">
-              <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-500 mb-4">Strategic Outcomes</h2>
+              <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-700 mb-4">Strategic Outcomes</h2>
               <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Decisions & Impact.</h3>
             </div>
           </div>
@@ -481,24 +537,24 @@ export default function App() {
 
                 <div className="flex-1 space-y-10 pt-4">
                   <div>
-                    <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 mb-4">{proj.role}</div>
+                    <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 mb-4">{proj.role}</div>
                     <h4 className="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">{proj.title}</h4>
                     <p className="text-lg font-bold text-slate-900 border-l-2 border-slate-900 pl-4">{proj.oneSentenceImpact}</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-12">
                     <div>
-                      <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-3">The Problem</div>
+                      <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-3">The Problem</div>
                       <p className="text-slate-600 leading-relaxed font-medium">{proj.problem}</p>
                     </div>
                     <div>
-                      <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-3">Decision Owned</div>
+                      <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-3">Decision Owned</div>
                       <p className="text-slate-900 leading-relaxed font-bold italic">"{proj.decision}"</p>
                     </div>
                   </div>
 
                   <div className="p-8 bg-slate-900 text-white rounded-3xl">
-                     <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-3">Audit-able Outcome</div>
+                     <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-3">Audit-able Outcome</div>
                      <p className="text-2xl font-bold tracking-tight">{proj.outcome}</p>
                   </div>
 
@@ -520,7 +576,7 @@ export default function App() {
       <section id="thinking" className="py-24 md:py-32 px-6 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-2xl mb-20">
-            <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-500 mb-4">Perspective</h2>
+            <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-700 mb-4">Thinking</h2>
             <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Technical Product Strategy & The Future of Platforms.</h3>
           </div>
 
@@ -529,8 +585,11 @@ export default function App() {
               <div key={i} className="p-10 bg-white rounded-[2.5rem] border border-slate-200 hover:border-slate-900 transition-all group">
                 <div className="text-xs font-bold text-slate-400 mb-6">{essay.date}</div>
                 <h4 className="text-3xl font-bold mb-6 group-hover:translate-x-2 transition-transform">{essay.title}</h4>
-                <p className="text-slate-600 leading-relaxed mb-8">{essay.excerpt}</p>
-                <button className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-slate-900">
+                <p className="text-slate-800 leading-relaxed mb-8">{essay.excerpt}</p>
+                <button
+                  onClick={() => setSelectedEssay(essay)}
+                  className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-slate-900"
+                >
                   Read Essay <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -546,7 +605,7 @@ export default function App() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#334155_0%,transparent_70%)] opacity-30" />
             
             <div className="relative z-10 max-w-3xl mx-auto">
-              <Mail className="w-12 h-12 mx-auto mb-10 text-slate-400" />
+              <Mail className="w-12 h-12 mx-auto mb-10 text-slate-600" />
               <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">Let's synthesize something <br/>that lasts.</h2>
               <p className="text-xl text-slate-300 mb-12 leading-relaxed">
                 Seeking Principal-level opportunities where deep technical fluency meets AI strategy. 
