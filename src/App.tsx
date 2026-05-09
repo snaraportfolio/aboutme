@@ -33,8 +33,8 @@ export default function App() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 px-6">
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-          <div className="absolute top-1/4 -right-1/10 w-[600px] h-[600px] bg-slate-200 rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 -left-1/10 w-[600px] h-[600px] bg-slate-100 rounded-full blur-[120px]" />
+          <div className="absolute top-1/4 -right-1/10 w-[600px] h-[600px] bg-stone-200 rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 -left-1/10 w-[600px] h-[600px] bg-stone-100 rounded-full blur-[120px]" />
           <div className="h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px]" />
         </div>
 
@@ -46,7 +46,7 @@ export default function App() {
           >
             <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
               <div className="flex-1 order-2 lg:order-1">
-                <div id="about" className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-slate-700 mb-8 border border-slate-200/50">
+                <div id="about" className="inline-flex items-center gap-3 px-4 py-2 bg-stone-900/5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-stone-700 mb-8 border border-stone-200/50">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -56,19 +56,19 @@ export default function App() {
                 
                 <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter leading-[0.85] mb-8">
                   Sunitha <br />
-                  Narayanan<span className="text-slate-300">.</span>
+                  Narayanan<span className="text-stone-300">.</span>
                 </h1>
                 
                 <div className="mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+                  <h2 className="text-2xl md:text-3xl font-bold text-stone-900 tracking-tight">
                     Principal Technical Product Manager
                   </h2>
-                  <p className="text-slate-700 font-medium text-sm mt-2">Available · Principal IC & Director roles Based in Portland, OR · Open to remote & hybrid (PST / EST)</p>
+                  <p className="text-stone-700 font-medium text-sm mt-2">Available · Principal IC & Director roles Based in Portland, OR · Open to remote & hybrid (PST / EST)</p>
                 </div>
 
                 <div className="space-y-6 mb-12">
                   <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
-                    <span className="text-slate-900 font-bold">Authoring an enterprise blueprint for safely operationalizing autonomous agents</span> — data-dependency mapping, cost-to-value gates, and governance for high-compliance environments.
+                    <span className="text-stone-900 font-bold">Authoring an enterprise blueprint for safely operationalizing autonomous agents</span> — data-dependency mapping, cost-to-value gates, and governance for high-compliance environments.
                   </p>
                   <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
                     <span className="text-slate-900 font-bold">Consumer product creation & data viz:</span> Owned the technical strategy for physiological body-map visualizations for apparel design for performance products.
@@ -82,7 +82,7 @@ export default function App() {
                 <div className="flex flex-col sm:flex-row gap-4 mb-16">
                   <a 
                     href="mailto:sunitha.n@gmail.com"
-                    className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-slate-900/40 hover:bg-slate-800 transition-all active:scale-95"
+                    className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-indigo-600 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-indigo-600/40 hover:bg-indigo-700 transition-all active:scale-95"
                   >
                     Email Me
                     <Mail className="w-5 h-5" />
@@ -250,7 +250,7 @@ export default function App() {
               <div className="p-8 md:p-12 border border-slate-100 rounded-[2.5rem] bg-[#FAFAFA]">
                  <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-8">Mentorship Impact</div>
                  <h4 className="text-3xl font-bold mb-4">30+ Women Mentored</h4>
-                 <p className="text-slate-800 leading-relaxed">
+                 <p className="text-lg md:text-xl text-stone-800 leading-relaxed">
                    Founded a cross-functional mentorship circle to sponsor emerging talent. 
                    Focused on navigating technical seniority and building influence in architectural reviews.
                  </p>
