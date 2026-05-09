@@ -39,7 +39,7 @@ export function Nav() {
           
           <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest items-center">
             <button onClick={() => navigateTo("#about")} className="hover:text-[#5d5f75] transition-colors">About</button>
-            <button onClick={() => navigateTo("#expertise")} className="hover:text-[#5d5f75] transition-colors">Expertise</button>
+            <button onClick={() => navigateTo("#expertise")} className="hover:text-[#5d5f75] transition-colors">Leadership & Values</button>
             <button onClick={() => navigateTo("#impact")} className="hover:text-[#5d5f75] transition-colors">Outcomes</button>
             <button onClick={() => navigateTo("#thinking")} className="hover:text-[#5d5f75] transition-colors">Thinking</button>
             <a 
@@ -69,7 +69,7 @@ export function Nav() {
         >
           <div className="flex flex-col gap-8 text-2xl font-bold tracking-tight">
             <button className="text-left" onClick={() => { navigateTo("#about"); setMobileMenuOpen(false); }}>About</button>
-            <button className="text-left" onClick={() => { navigateTo("#expertise"); setMobileMenuOpen(false); }}>Expertise</button>
+            <button className="text-left" onClick={() => { navigateTo("#expertise"); setMobileMenuOpen(false); }}>Leadership & Values</button>
             <button className="text-left" onClick={() => { navigateTo("#impact"); setMobileMenuOpen(false); }}>Impact</button>
             <a 
               href="https://drive.google.com/file/d/11jNyRSZGbXBeZiaUFqsn-r-gFhosTd7u/view?usp=sharing"

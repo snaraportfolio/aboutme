@@ -28,19 +28,14 @@ export interface Essay {
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    quote: "Sunitha has a rare ability to bridge the gap between high-level executive vision and deep architectural constraints. She doesn't just manage products; she unblocks entire engineering organizations.",
-    author: "Engineering Director",
+    quote: "Sunitha has a rare ability to bridge the gap between high-level executive vision and deep architectural constraints. She unblocks entire engineering organizations by expertly identifying solution roadmaps, prioritizing high-impact decisions, and actively mitigating risks in partnership with leadership.",
+    author: "Business Leader",
     role: "Digital Platform Lead @ Nike"
   },
   {
     quote: "Sunitha has a rare ability to blend her engineering pedigree to deliver great product experiences. She keeps the customer at the heart of everything she does, building lasting business partnerships while navigating real-world technical constraints without losing momentum. A product leader with a serious engineering background who stays curious—she has the unique vision required to lead radical transformations.",
     author: "Engineering Director",
     role: "Director Product Creation"
-  },
-  {
-    quote: "A minimalistic website that gets right to the point. The allocation of text compared to whitespace makes it incredibly easy to navigate. The product stories and the bookshelf tab are great highlights that show deep commitment to craft.",
-    author: "Product Design Peer",
-    role: "Portfolio Reviewer"
   }
 ];
 
@@ -116,20 +111,6 @@ Ultimately, my role was to manage the "Messy Middle." I didn't do the work of th
 ];
 
 export const PROJECTS: Project[] = [
-  {
-    title: "Strategic AI & Agentic Core",
-    years: "AI Adoption",
-    shortName: "AGENTIC",
-    oneSentenceImpact: "Developing an enterprise-grade framework for business case selection and agentic capacity creation.",
-    role: "Principal PM, AI Strategy",
-    context: "Organizations struggle to move from LLM chat curiosity to measurable agentic workflows with ROI.",
-    problem: "Lack of a structured method for identifying high-margin agentic use cases and measuring the resulting capacity creation.",
-    decision: "Independently researching a 'Decision-to-Metric' framework that maps agent capability to organizational capacity.",
-    outcome: "Drafting the 'Strategy in Motion' blueprint to enable secure adoption and measurable business metrics for agentic pilots.",
-    impact: "Researching autonomous agent frameworks with a focus on data dependency and cost-to-value trade-offs. Mapping how agentic implementations create capacity for new organizational capabilities.",
-    tags: ["Agentic AI", "Business Metrics", "Strategic Framework", "Capacity Creation"],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
-  },
   {
     title: "Innovation & Biomechanical Platform",
     years: "Innovation & Scale",

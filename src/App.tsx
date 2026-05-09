@@ -51,31 +51,27 @@ export default function App() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
-                  Available · Principal IC & Director roles
+                  Seeking Principal IC & Director roles
                 </div>
                 
                 <h1 className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter leading-[0.85] mb-8">
-                  Sunitha <br />
-                  Narayanan<span className="text-stone-300">.</span>
+                  SUNITHA <br />
+                  NARAYANAN<span className="text-stone-300">.</span>
                 </h1>
                 
                 <div className="mb-8">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2B2D42] tracking-tight">
-                    Principal Technical Product Manager
+                    Principal Technical Product Leader
                   </h2>
-                  <p className="text-[#5d5f75] font-medium text-sm mt-2">Available · Principal IC & Director roles Based in Portland, OR · Open to remote & hybrid (PST / EST)</p>
+                  <p className="text-[#5d5f75] font-medium text-sm mt-2">Previously: Nike Digital Innovation (6 years) · Currently: Seeking Principal/Director roles in AI Platform Strategy</p>
                 </div>
 
                 <div className="space-y-6 mb-12">
                   <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
-                    <span className="text-stone-900 font-bold">Authoring an enterprise blueprint for safely operationalizing autonomous agents</span> — data-dependency mapping, cost-to-value gates, and governance for high-compliance environments.
+                    Engineer-turned-product leader specializing in <span className="text-slate-900 font-bold">innovation-to-scale execution</span>. Led platform modernization, biomechanical ML products, and global D2C expansion driving $1B+ ARR across 5 regions.
                   </p>
-                  <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
-                    <span className="text-slate-900 font-bold">Consumer product creation & data viz:</span> Owned the technical strategy for physiological body-map visualizations for apparel design for performance products.
-                  </p>
-                  <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
-                    <span className="text-slate-900 font-bold">I specialize in the journey from Innovation to Pilot to Scale.</span> 
-                    By bridging deep technical strategy with product execution, I unblock complex organizations and transform ambitious concepts into global enterprise reality.
+                  <p className="text-lg md:text-xl text-slate-900 font-bold leading-relaxed">
+                    [Metrics: $2M+ ARR | 500%+ Traffic Growth | 180%+ Engagement | 99.99% Uptime]
                   </p>
                 </div>
                 
@@ -95,9 +91,17 @@ export default function App() {
                   </a>
                 </div>
 
-                <p className="text-slate-600 font-medium italic text-sm mb-12">
-                  Currently exploring Principal/Director roles in AI platform strategy.
-                </p>
+                <div className="text-slate-600 font-medium text-sm mb-12 leading-relaxed space-y-2">
+                  <p>Seeking Principal IC or Director Product roles where:</p>
+                  <ul className="list-disc pl-5">
+                    <li>AI platform strategy drives enterprise transformation</li>
+                    <li>Technical depth unlocks strategic business decisions</li>
+                    <li>Innovation-to-scale execution is the core challenge</li>
+                    <li>Product leadership shapes engineering culture</li>
+                  </ul>
+                  <p className="mt-4"><strong>Ideal:</strong> AI-first companies, enterprise SaaS platforms, or technical product infrastructure teams solving complex organizational problems.</p>
+                  <p className="mt-2"><strong>Open to:</strong> Remote, hybrid (Portland, OR), or relocation for the right role.</p>
+                </div>
 
                 <div className="flex flex-wrap items-center gap-x-12 gap-y-6 pt-12 border-t border-slate-200">
                   <div className="flex flex-col">
@@ -191,19 +195,16 @@ export default function App() {
         </div>
       </section>
 
-      {/* Expertise Section */}
+      {/* Core Value & Leadership Section */}
       <section id="expertise" className="py-24 md:py-32 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start mb-32">
             <div>
               <div className="inline-block py-1 pr-6 border-r border-slate-900 mb-8">
-                <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-600">Principal Scope</h2>
+                <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-600">Skills Taxonomy</h2>
               </div>
-              <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Unblocking Orgs <br/>Through Technical Strategy.</h3>
+              <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Unblocking Organizations <br/>Through Technical Strategy.</h3>
               <div className="space-y-6 mb-12">
-                <p className="text-xl text-slate-900 font-bold leading-tight">
-                  "To lead is to prioritize the right problem, not just the right solution. Technical depth is a baseline; empathy is the differentiator."
-                </p>
                 <p className="text-lg text-slate-800 leading-relaxed">
                   I replace roadmap-driven development with research-driven purpose. By surfacing where users are truly stuck—not just where they say they are—I bridge the gap between complex technical potential and transformative business value.
                 </p>
@@ -211,9 +212,10 @@ export default function App() {
               
               <div className="space-y-4 mb-12">
                 {[
-                  { icon: Zap, title: "The Synthesis Engine", desc: "I distill complex technical friction into actionable strategic roadmaps that execs can fund and engineers can ship." },
-                  { icon: Users2, title: "Unblocking Organizations", desc: "Setting the trust boundaries for Agentic AI and global data privacy in high-compliance environments." },
-                  { icon: Server, title: "Architectural Depth", desc: "Deep fluency in cloud-native modernization, microservices, and global D2C infrastructure." }
+                  { icon: Zap, title: "The Synthesis Engine", desc: "I distill complex technical friction into actionable strategic roadmaps that executives can fund and engineers can ship. Platform products don't fail from bad code—they fail from misaligned incentives." },
+                  { icon: Server, title: "Architectural Depth", desc: "Deep fluency in cloud-native modernization, microservices, and global D2C infrastructure. I speak both boardroom and backlog, translating business vision into technical reality." },
+                  { icon: Users2, title: "Relational Leadership", desc: "Mentored 30+ women in tech through a cross-functional mentorship circle. I view leadership as the orchestration of inclusive human systems—diverse teams ship better products." },
+                  { icon: Zap, title: "Principled Decision-Making", desc: "I optimize for long-term platform health over short-term feature velocity. The best decisions balance user needs, technical constraints, and organizational readiness—not just one of the three." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6 p-6 rounded-2xl bg-[#FAFAFA] border border-slate-100 items-center">
                     <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900 flex-shrink-0">
@@ -229,23 +231,6 @@ export default function App() {
             </div>
             
             <div className="space-y-8">
-              <div className="bg-[#2B2D42] rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden">
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-10">Decision-Making Framework</div>
-                <div className="space-y-8">
-                  {TESTIMONIALS.map((t, i) => (
-                    <div key={i} className="relative">
-                      <p className="text-xl font-medium leading-relaxed italic mb-6">"{t.quote}"</p>
-                      <div className="flex items-center gap-4">
-                        <div className="h-px w-8 bg-white/20" />
-                        <div>
-                          <div className="font-bold text-sm">{t.author}</div>
-                          <div className="text-[10px] uppercase tracking-widest text-slate-600">{t.role}</div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
               <div className="p-8 md:p-12 border border-slate-100 rounded-[2.5rem] bg-[#FAFAFA]">
                  <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-8">Mentorship Impact</div>
@@ -256,6 +241,27 @@ export default function App() {
                  </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-24 md:py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-700 mb-16">What Colleagues Say</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {TESTIMONIALS.map((t, i) => (
+              <div key={i} className="bg-[#2B2D42] p-10 rounded-[2.5rem] text-white">
+                <p className="text-xl font-medium leading-relaxed italic mb-8">"{t.quote}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="h-px w-8 bg-white/20" />
+                  <div>
+                    <div className="font-bold text-sm">{t.author}</div>
+                    <div className="text-[10px] uppercase tracking-widest text-white/60">{t.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -349,6 +355,35 @@ export default function App() {
                 </button>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Current Focus + Thought Leadership Section */}
+      <section id="focus" className="py-24 md:py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl">
+            <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-700 mb-8">Current Focus + Thought Leadership</h2>
+            
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold mb-4">CURRENT FOCUS</h3>
+              <p className="text-xl font-bold mb-2">Strategic AI Research</p>
+              <p className="text-lg text-slate-800 leading-relaxed">Independently developing enterprise frameworks for agentic AI adoption in high-compliance environments.</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold mb-8">THOUGHT LEADERSHIP</h3>
+              <div className="space-y-8">
+                <div>
+                  <p className="text-xl font-bold mb-2">The Agentic Adoption Blueprint (May 2026)</p>
+                  <p className="text-lg text-slate-800 leading-relaxed">Moving beyond LLM chat toward autonomous trust boundaries.</p>
+                </div>
+                <div>
+                  <p className="text-xl font-bold mb-2">Innovation to Scale: An Orchestration Playbook (2025)</p>
+                  <p className="text-lg text-slate-800 leading-relaxed">A tactical framework for bridging R&D concepts to enterprise deployment.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
