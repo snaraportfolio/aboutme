@@ -201,44 +201,35 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start mb-32">
             <div>
               <div className="inline-block py-1 pr-6 border-r border-slate-900 mb-8">
-                <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-600">Skills Taxonomy</h2>
+                <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-slate-600">Leadership & Values</h2>
               </div>
               <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">Unblocking Organizations <br/>Through Technical Strategy.</h3>
               <div className="space-y-6 mb-12">
+                <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">
+                  25 Years of Product & Technical Evolution
+                </p>
                 <p className="text-lg text-slate-800 leading-relaxed">
                   I replace roadmap-driven development with research-driven purpose. By surfacing where users are truly stuck—not just where they say they are—I bridge the gap between complex technical potential and transformative business value.
                 </p>
               </div>
               
-              <div className="space-y-4 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {[
                   { icon: Zap, title: "The Synthesis Engine", desc: "I distill complex technical friction into actionable strategic roadmaps that executives can fund and engineers can ship. Platform products don't fail from bad code—they fail from misaligned incentives." },
-                  { icon: Server, title: "Architectural Depth", desc: "Deep fluency in cloud-native modernization, microservices, and global D2C infrastructure. I speak both boardroom and backlog, translating business vision into technical reality." },
+                  { icon: Server, title: "Architectural Depth", desc: "Architecting the transition of legacy e-commerce to modular, AI-first platforms—balancing the cost of technical debt against the velocity of new market entry." },
                   { icon: Users2, title: "Relational Leadership", desc: "Mentored 30+ women in tech through a cross-functional mentorship circle. I view leadership as the orchestration of inclusive human systems—diverse teams ship better products." },
                   { icon: Zap, title: "Principled Decision-Making", desc: "I optimize for long-term platform health over short-term feature velocity. The best decisions balance user needs, technical constraints, and organizational readiness—not just one of the three." }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-6 p-6 rounded-2xl bg-[#FAFAFA] border border-slate-100 items-center">
-                    <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900 flex-shrink-0">
+                  <div key={i} className="flex flex-col gap-6 p-8 rounded-2xl bg-[#FAFAFA] border border-slate-100">
+                    <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900">
                       <item.icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                      <h4 className="font-bold text-lg mb-2">{item.title}</h4>
                       <p className="text-slate-800 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-            
-            <div className="space-y-8">
-
-              <div className="p-8 md:p-12 border border-slate-100 rounded-[2.5rem] bg-[#FAFAFA]">
-                 <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-8">Mentorship Impact</div>
-                 <h4 className="text-3xl font-bold mb-4">30+ Women Mentored</h4>
-                 <p className="text-lg md:text-xl text-stone-800 leading-relaxed">
-                   Founded a cross-functional mentorship circle to sponsor emerging talent. 
-                   Focused on navigating technical seniority and building influence in architectural reviews.
-                 </p>
               </div>
             </div>
           </div>
