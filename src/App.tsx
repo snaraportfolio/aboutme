@@ -66,13 +66,25 @@ export default function App() {
                   <p className="text-[#5d5f75] font-medium text-sm mt-2">Previously: Nike Digital Innovation (6 years) · Currently: Seeking Principal/Director roles in AI Platform Strategy</p>
                 </div>
 
-                <div className="space-y-6 mb-12">
-                  <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
-                    Engineer-turned-product leader specializing in <span className="text-slate-900 font-bold">innovation-to-scale execution</span>. Led platform modernization, biomechanical ML products, and global D2C expansion driving $1B+ ARR across 5 regions.
+                <div className="space-y-6 mb-12 text-lg text-slate-800 leading-relaxed">
+                  <p>
+                    Engineer-turned-product leader specializing in <span className="text-slate-900 font-bold">innovation-to-scale execution</span>.
+                    Led Nike's digital evolution across enterprise and consumer platforms:
                   </p>
-                  <p className="text-lg md:text-xl text-slate-900 font-bold leading-relaxed">
-                    [Metrics: $2M+ ARR | 500%+ Traffic Growth | 180%+ Engagement | 99.99% Uptime]
-                  </p>
+
+                  <div className="space-y-4">
+                    {[
+                      { title: "Digital Innovation", desc: "Biomechanical ML platforms, predictive sizing, and physiological data visualization driving 180%+ engagement and 18% LTV lift" },
+                      { title: "Enterprise Product Creation Platform", desc: "Unified digital core for 3,000+ global users with 12x release velocity and 99.9% uptime" },
+                      { title: "Global D2C Platform", desc: "Multi-billion dollar e-commerce across 4 regions, 500%+ traffic growth, 99.99% uptime" },
+                      { title: "Digital Wholesale Platform", desc: "Web-based order flow across global wholesale channels with SAP integration, enabling self-service transactions for 16,000+ retail partners" }
+                    ].map((item, i) => (
+                      <div key={i}>
+                        <p className="text-slate-900 font-bold text-base">{item.title}</p>
+                        <p className="text-sm text-slate-700">{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-16">
