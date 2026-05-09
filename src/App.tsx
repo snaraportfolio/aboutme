@@ -51,7 +51,7 @@ export default function App() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
-                  Seeking Principal IC & Director roles
+                  SEEKING PRINCIPAL IC & DIRECTOR ROLES
                 </div>
                 
                 <h1 className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter leading-[0.85] mb-8">
@@ -61,23 +61,29 @@ export default function App() {
                 
                 <div className="mb-8">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2B2D42] tracking-tight">
-                    Principal Technical Product Leader
+                    Principal Technical Product Manager
                   </h2>
-                  <p className="text-[#5d5f75] font-medium text-sm mt-2">Previously: Nike Digital Innovation (6 years) · Currently: Seeking Principal/Director roles in AI Platform Strategy</p>
+                  <p className="text-[#5d5f75] font-medium text-sm mt-2">Previously: Nike Digital Innovation (Product Technology & Strategy) · Currently: Seeking Principal/Director roles in AI Platform Strategy</p>
+                  <p className="text-[#5d5f75] font-medium text-sm mt-1">Portland, OR · Open to Remote & Hybrid (PST/EST)</p>
                 </div>
 
                 <div className="space-y-6 mb-12 text-lg text-slate-800 leading-relaxed">
                   <p>
-                    Engineer-turned-product leader specializing in <span className="text-slate-900 font-bold">innovation-to-scale execution</span>.
-                    Led Nike's digital evolution across enterprise and consumer platforms:
+                    Architecting the invisible systems that enable global innovation.
                   </p>
+                  <p>
+                    Engineer-turned-product leader specializing in <span className="text-slate-900 font-bold">innovation-to-scale execution</span>.
+                    Led Nike's digital transformation across consumer, enterprise, and B2B platforms—from biomechanical ML innovation to global D2C expansion to digital wholesale systems serving 16,000+ retail partners.
+                  </p>
+
+                  <p className="font-bold">Platform Leadership:</p>
 
                   <div className="space-y-4">
                     {[
-                      { title: "Digital Innovation", desc: "Biomechanical ML platforms, predictive sizing, and physiological data visualization driving 180%+ engagement and 18% LTV lift" },
-                      { title: "Enterprise Product Creation Platform", desc: "Unified digital core for 3,000+ global users with 12x release velocity and 99.9% uptime" },
-                      { title: "Global D2C Platform", desc: "Multi-billion dollar e-commerce across 4 regions, 500%+ traffic growth, 99.99% uptime" },
-                      { title: "Digital Wholesale Platform", desc: "Web-based order flow across global wholesale channels with SAP integration, enabling self-service transactions for 16,000+ retail partners" }
+                      { title: "Digital Innovation", desc: "Biomechanical ML platforms governing biometric PII across 4 regions, 180%+ engagement lift, 18% LTV increase" },
+                      { title: "Enterprise Product Creation", desc: "Unified digital core for 3,000+ users, 12x release velocity, 99.9% uptime" },
+                      { title: "Global D2C Expansion", desc: "Multi-billion dollar e-commerce, 500%+ traffic growth, 99.99% uptime, $1B+ ARR" },
+                      { title: "Digital Wholesale Platform", desc: "Web-based order flow for 16,000+ retail partners with SAP integration and self-service transactions" }
                     ].map((item, i) => (
                       <div key={i}>
                         <p className="text-slate-900 font-bold text-base">{item.title}</p>
@@ -85,6 +91,9 @@ export default function App() {
                       </div>
                     ))}
                   </div>
+                  <p className="text-lg text-slate-900 font-bold leading-relaxed">
+                    [Metrics: $1B+ ARR | 500%+ Traffic | 180% Engagement | 99.99% Uptime]
+                  </p>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-16">
