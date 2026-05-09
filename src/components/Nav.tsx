@@ -1,11 +1,22 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, Linkedin, Mail, Github } from "lucide-react";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const navigateTo = (hash: string) => {
+    navigate("/");
+    setTimeout(() => {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -22,10 +33,10 @@ export function Nav() {
           </Link>
           
           <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest items-center">
-            <a href="/#about" className="hover:text-slate-500 transition-colors">About</a>
-            <a href="/#expertise" className="hover:text-slate-500 transition-colors">Expertise</a>
-            <a href="/#impact" className="hover:text-slate-500 transition-colors">Outcomes</a>
-            <a href="/#thinking" className="hover:text-slate-500 transition-colors">Thinking</a>
+            <button onClick={() => navigateTo("#about")} className="hover:text-slate-500 transition-colors">About</button>
+            <button onClick={() => navigateTo("#expertise")} className="hover:text-slate-500 transition-colors">Expertise</button>
+            <button onClick={() => navigateTo("#impact")} className="hover:text-slate-500 transition-colors">Outcomes</button>
+            <button onClick={() => navigateTo("#thinking")} className="hover:text-slate-500 transition-colors">Thinking</button>
             <a 
               href="https://drive.google.com/file/d/11jNyRSZGbXBeZiaUFqsn-r-gFhosTd7u/view?usp=sharing" 
               target="_blank" 
@@ -34,9 +45,9 @@ export function Nav() {
             >
               Resume
             </a>
-            <a href="/#contact" className="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-slate-700 transition-all active:scale-95 shadow-lg shadow-slate-900/10 hover:shadow-slate-900/20">
+            <button onClick={() => navigateTo("#contact")} className="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-slate-700 transition-all active:scale-95 shadow-lg shadow-slate-900/10 hover:shadow-slate-900/20">
               Contact
-            </a>
+            </button>
           </div>
 
           <button className="md:hidden text-slate-900" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -52,9 +63,9 @@ export function Nav() {
           className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden"
         >
           <div className="flex flex-col gap-8 text-2xl font-bold tracking-tight">
-            <a href="/#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="/#expertise" onClick={() => setMobileMenuOpen(false)}>Expertise</a>
-            <a href="/#impact" onClick={() => setMobileMenuOpen(false)}>Impact</a>
+            <button className="text-left" onClick={() => { navigateTo("#about"); setMobileMenuOpen(false); }}>About</button>
+            <button className="text-left" onClick={() => { navigateTo("#expertise"); setMobileMenuOpen(false); }}>Expertise</button>
+            <button className="text-left" onClick={() => { navigateTo("#impact"); setMobileMenuOpen(false); }}>Impact</button>
             <a 
               href="https://drive.google.com/file/d/11jNyRSZGbXBeZiaUFqsn-r-gFhosTd7u/view?usp=sharing"
               target="_blank"
@@ -62,7 +73,7 @@ export function Nav() {
             >
               Resume
             </a>
-            <a href="/#contact" className="text-slate-400" onClick={() => setMobileMenuOpen(false)}>Hire Me</a>
+            <button className="text-left text-slate-400" onClick={() => { navigateTo("#contact"); setMobileMenuOpen(false); }}>Hire Me</button>
             
             <div className="pt-12 border-t border-slate-100 flex gap-6">
               <a href="http://linkedin.com/in/nsunitha" target="_blank" rel="noopener noreferrer"><Linkedin className="w-6 h-6" /></a>

@@ -263,7 +263,7 @@ export default function App() {
       {/* Impact Section */}
       <section id="impact" className="py-24 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-8 relative z-10">
             <div className="max-w-2xl">
               <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-slate-700 mb-4">Strategic Outcomes</h2>
               <h3 className="text-4xl md:text-5xl font-bold tracking-tight">Decisions & Impact.</h3>
@@ -309,7 +309,7 @@ export default function App() {
                   </div>
 
                   <div className="p-8 bg-slate-900 text-white rounded-3xl">
-                     <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-3">Audit-able Outcome</div>
+                     <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-3">Audit-able Outcome</div>
                      <p className="text-2xl font-bold tracking-tight">{proj.outcome}</p>
                   </div>
 
