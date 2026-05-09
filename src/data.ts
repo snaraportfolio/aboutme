@@ -113,7 +113,7 @@ Ultimately, my role was to manage the "Messy Middle." I didn't do the work of th
 export const PROJECTS: Project[] = [
   {
     title: "Strategic AI & Agentic Core",
-    years: "2024 - Present",
+    years: "AI Adoption",
     shortName: "AGENTIC",
     oneSentenceImpact: "Developing an enterprise-grade framework for business case selection and agentic capacity creation.",
     role: "Principal PM, AI Strategy",
@@ -127,7 +127,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Innovation & Biomechanical Platform",
-    years: "2018 - 2023",
+    years: "Innovation & Scale",
     shortName: "INNOVATION",
     oneSentenceImpact: "Orchestrated the experimentation, pilot, and global scale-up of biomechanical insights and ML-driven consumer platforms, governing enterprise PII while driving 180% engagement.",
     role: "Principal Product Manager",
@@ -141,7 +141,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Enterprise Platforms & Digital Core",
-    years: "2018 - 2021",
+    years: "Digital Core Transformation",
     shortName: "SCALE",
     oneSentenceImpact: "Modernized legacy supply chains into a unified, cloud-native digital core with 12x faster release velocity.",
     role: "Principal Product Manager",
@@ -155,7 +155,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Multi-Region Ecommerce Orchestration",
-    years: "2015 - 2018",
+    years: "Global Expansion",
     shortName: "GLOBAL",
     oneSentenceImpact: "Shipped a multi-billion dollar D2C platform across 5 global regions with 99.99% availability.",
     role: "Principal Product Manager",
