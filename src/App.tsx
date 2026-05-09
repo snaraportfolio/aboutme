@@ -10,7 +10,10 @@ import {
   Linkedin, 
   Github,
   Menu,
-  X
+  X,
+  Zap,
+  Users2,
+  Server
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { PROJECTS, ESSAYS, TESTIMONIALS, Essay } from "./data";
