@@ -36,6 +36,11 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: "Sunitha has a rare ability to blend her engineering pedigree to deliver great product experiences. She keeps the customer at the heart of everything she does, building lasting business partnerships while navigating real-world technical constraints without losing momentum. A product leader with a serious engineering background who stays curious—she has the unique vision required to lead radical transformations.",
     author: "Engineering Director",
     role: "Director Product Creation"
+  },
+  {
+    quote: "A minimalistic website that gets right to the point. The allocation of text compared to whitespace makes it incredibly easy to navigate. The product stories and the bookshelf tab are great highlights that show deep commitment to craft.",
+    author: "Product Design Peer",
+    role: "Portfolio Reviewer"
   }
 ];
 

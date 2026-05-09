@@ -28,10 +28,10 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] font-sans selection:bg-slate-900 selection:text-white overflow-x-hidden text-slate-900">
+    <div className="min-h-screen bg-[#EDF2F4] font-sans selection:bg-[#2B2D42] selection:text-white overflow-x-hidden text-[#2B2D42]">
       <Nav />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 px-6">
+      <section className="relative min-h-[90vh] flex items-center pt-32 pb-24 px-6">
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
           <div className="absolute top-1/4 -right-1/10 w-[600px] h-[600px] bg-stone-200 rounded-full blur-[120px]" />
           <div className="absolute bottom-1/4 -left-1/10 w-[600px] h-[600px] bg-stone-100 rounded-full blur-[120px]" />
@@ -46,7 +46,7 @@ export default function App() {
           >
             <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
               <div className="flex-1 order-2 lg:order-1">
-                <div id="about" className="inline-flex items-center gap-3 px-4 py-2 bg-stone-900/5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-stone-700 mb-8 border border-stone-200/50">
+                <div id="about" className="inline-flex items-center gap-3 px-5 py-2.5 bg-[#2B2D42]/5 rounded-full text-[11px] font-bold uppercase tracking-[0.25em] text-[#5d5f75] mb-10 border border-[#2B2D42]/10">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -54,16 +54,16 @@ export default function App() {
                   Available · Principal IC & Director roles
                 </div>
                 
-                <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter leading-[0.85] mb-8">
+                <h1 className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter leading-[0.85] mb-8">
                   Sunitha <br />
                   Narayanan<span className="text-stone-300">.</span>
                 </h1>
                 
                 <div className="mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-stone-900 tracking-tight">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2B2D42] tracking-tight">
                     Principal Technical Product Manager
                   </h2>
-                  <p className="text-stone-700 font-medium text-sm mt-2">Available · Principal IC & Director roles Based in Portland, OR · Open to remote & hybrid (PST / EST)</p>
+                  <p className="text-[#5d5f75] font-medium text-sm mt-2">Available · Principal IC & Director roles Based in Portland, OR · Open to remote & hybrid (PST / EST)</p>
                 </div>
 
                 <div className="space-y-6 mb-12">
@@ -82,14 +82,14 @@ export default function App() {
                 <div className="flex flex-col sm:flex-row gap-4 mb-16">
                   <a 
                     href="mailto:sunitha.n@gmail.com"
-                    className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-indigo-600 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-indigo-600/40 hover:bg-indigo-700 transition-all active:scale-95"
+                    className="inline-flex items-center justify-center gap-3 px-12 py-6 bg-[#E07A5F] text-white rounded-2xl font-bold text-lg shadow-xl shadow-[#E07A5F]/20 hover:bg-[#CC6A50] transition-all active:scale-[0.98]"
                   >
                     Email Me
                     <Mail className="w-5 h-5" />
                   </a>
                   <a 
                     href="#impact"
-                    className="inline-flex items-center justify-center px-10 py-5 border-2 border-slate-200 text-slate-900 rounded-2xl font-bold text-lg hover:border-slate-900 hover:bg-slate-50 transition-all"
+                    className="inline-flex items-center justify-center px-12 py-6 border-2 border-[#2B2D42]/20 text-[#2B2D42] rounded-2xl font-bold text-lg hover:border-[#2B2D42] hover:bg-[#2B2D42]/5 transition-all"
                   >
                     View Outcomes
                   </a>
@@ -112,7 +112,7 @@ export default function App() {
               </div>
 
               <div className="lg:w-[450px] order-1 lg:order-2 relative">
-                <div className="aspect-[4/5] rounded-[4rem] overflow-hidden bg-slate-900 relative shadow-2xl group border-[12px] border-white">
+                <div className="aspect-[4/5] rounded-[4rem] overflow-hidden bg-[#2B2D42] relative shadow-2xl group border-[12px] border-white">
                   <img 
                     src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200" 
                     alt="Strategic Execution and Data Orchestration"
@@ -152,7 +152,7 @@ export default function App() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1 }}
-                  className="absolute -top-10 -right-10 w-24 h-24 bg-slate-900 rounded-3xl -z-10" 
+                  className="absolute -top-10 -right-10 w-24 h-24 bg-[#2B2D42] rounded-3xl -z-10" 
                 />
               </div>
             </div>
@@ -161,7 +161,7 @@ export default function App() {
       </section>
 
       {/* Stats/Value Prop Bar */}
-      <section className="bg-slate-900 text-white py-16 px-6 relative overflow-hidden">
+      <section className="bg-[#2B2D42] text-white py-16 px-6 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
         </div>
@@ -229,7 +229,7 @@ export default function App() {
             </div>
             
             <div className="space-y-8">
-              <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden">
+              <div className="bg-[#2B2D42] rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden">
                 <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600 mb-10">Decision-Making Framework</div>
                 <div className="space-y-8">
                   {TESTIMONIALS.map((t, i) => (
@@ -274,7 +274,7 @@ export default function App() {
             {PROJECTS.map((proj, i) => (
               <div 
                 key={i}
-                className="group flex flex-col xl:flex-row gap-12 lg:gap-20 items-start"
+                className="group flex flex-col lg:flex-row gap-12 lg:gap-20 items-start"
               >
                 <div className="xl:w-[350px] flex-shrink-0">
                   <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-slate-100 relative shadow-sm border border-slate-100">
@@ -308,7 +308,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="p-8 bg-slate-900 text-white rounded-3xl">
+                  <div className="p-8 bg-[#2B2D42] text-white rounded-3xl">
                      <div className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-3">Audit-able Outcome</div>
                      <p className="text-2xl font-bold tracking-tight">{proj.outcome}</p>
                   </div>
@@ -356,7 +356,7 @@ export default function App() {
       {/* CTA Section */}
       <section id="contact" className="py-24 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-slate-900 rounded-[3rem] p-10 md:p-24 text-white relative overflow-hidden text-center">
+          <div className="bg-[#2B2D42] rounded-[3rem] p-10 md:p-24 text-white relative overflow-hidden text-center">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#334155_0%,transparent_70%)] opacity-30" />
             
             <div className="relative z-10 max-w-3xl mx-auto">
